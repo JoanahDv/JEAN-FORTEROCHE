@@ -1,0 +1,133 @@
+/*---------------------------------------- */
+/* ==              FONTS                    */
+/*---------------------------------------- */
+body
+{
+    font-family: 'Roboto',condensed;
+    width: 100%;
+    margin: 0px;
+    line-height: 23px;
+    /* background-image: url("images/Alaskabg.jpg"); */
+
+}
+img{
+    width: 100%;
+    height:auto;
+}
+
+/* #homepage { */
+    /* position: absolute;
+    top: 50px; */
+    /* background-image: url(../images/simplealaska.jpg); */
+    /* background-size: cover; */
+    /* background-position: center;
+    background-attachment: fixed; */
+}
+/* #homepage {
+    position: absolute;
+    top: 140px; */
+    /* background-image: url(../images/Alaskabg.jpg); */
+    /* background-size: cover; */
+    /* background-position: center;
+    background-attachment: fixed; */
+/* } */
+.bloc_page
+{
+ margin: auto;
+ width: 100%;
+ /* background: #294664; */
+
+ /* background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.6) 50%, rgba(0, 0, 0, 0.3) 100%), url(../img/jean-forteroche-alaska.jpg); */
+ /* background-size: cover; */
+ /* background-position: center; */
+ /* background-attachment: fixed; */
+ /* position: relative; */
+ }
+ 
+/* ---------------------------------------- */
+/* ==              HEADER               */
+/*---------------------------------------- */
+header
+{
+background-color:#294040;
+position: fixed;
+z-index: 20; 
+top: 0;
+width: 100%;
+height:auto;
+border-bottom: 1px solid #e5e5e5;   
+display: flex;
+
+}
+header a , #slogan
+{
+    
+    text-decoration: none;
+    color: whitesmoke;
+
+}
+.nav,#author
+{
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    list-style-type: none;
+    margin: 0px;
+}
+.nav li, header form{
+    padding: 10px;
+}
+#slogan{
+    position: absolute;
+    text-align: center;
+    width: 95%;
+    top: 60%;
+}
+.startbutton
+{
+    padding: 9px;
+    width: 12%;
+    border-radius: 18px;
+}
+#booklist img 
+{
+    flex-direction: row;
+    flex-basis: 100%;
+    flex: 1;
+    margin: 12px;
+}
+#conteneur_contact form{
+    background-color: rgb(41 64 64 / 82%);
+    /* width: 300px; */
+    /* height: 83%; */
+    /* margin: 0px 0px; */
+    padding: 21px;
+    /* padding-right: 30px; */
+    border-radius: 3px
+}
+
+footer, footer a {
+    background-color: #292929;
+    color: white;
+    padding: 7px;
+    text-align: center;
+    display: block;
+}
+.socialmedia {
+    display: flex;
+    list-style-type: none;
+    text-align: center;
+    padding: 0px;
+    justify-content: center;
+}   
+
+@media screen and (min-width: 1200px)
+{
+    header 
+    {
+    padding-top: 16px;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 16px;
+    }
+}
