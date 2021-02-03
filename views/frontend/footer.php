@@ -1,5 +1,5 @@
 <footer>
-    <p>Copyright © 2020 charlotte .This site is done within the context of a training course.</p>
+    <p>Copyright © 2020 .This site is done within the context of a training course.</p>
     <p><a href="#"> Mentions légales</a></p>
     <p> Stay connected</p>
     <ul class="socialmedia">

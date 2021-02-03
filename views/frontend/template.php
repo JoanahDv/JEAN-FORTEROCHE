@@ -1,8 +1,4 @@
-<?php
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
-?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,7 +12,7 @@ error_reporting(E_ALL);
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
     <!-- MAIN STYLESHEET-->
-    <link href="/Project_4/style/index.css" rel="stylesheet"/>
+    <link href="public/style/index.css" rel="stylesheet"/>
     <!--FONTS -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
 
