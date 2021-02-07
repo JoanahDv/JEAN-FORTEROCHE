@@ -1,11 +1,12 @@
 <?php
 
-require('models/backend/model.php');
+require('models/backend/ChapterManager.php');
 
 function newChapter($parameters)
 {
     if (isset($parameters)) {
-        ($parameters['title'], $parameters['body']);
+        $chapterManager = new ChapterManagerBackend();
+        $chapterManager->createChapter($parameters['title'], $parameters['body']);
     }
     require('views/backend/chapter.php');
 }

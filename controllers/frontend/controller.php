@@ -9,14 +9,14 @@ function author ()
 
 function chapter($id)
 {
-    $chapterManager = new ChapterManager();
+    $chapterManager = new ChapterManagerFrontend();
     $chapter = $chapterManager->getChapter($id);
     require('views/frontend/chapter.php');
 }
 
 function chapters()
 {
-    $chapterManager = new ChapterManager();
+    $chapterManager = new ChapterManagerFrontend();
     $chapters = $chapterManager->getChapters();
     require('views/frontend/chapters.php');
 }

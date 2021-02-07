@@ -1,6 +1,6 @@
 <?php
 
-class ChapterManager
+class ChapterManagerBackend
 {
     function createChapter($title, $body, $published_date) 
     {

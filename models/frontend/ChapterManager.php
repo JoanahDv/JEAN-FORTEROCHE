@@ -1,6 +1,6 @@
 <?php
 
-class ChapterManager
+class ChapterManagerFrontend
 {
     function getChapters()
     {
