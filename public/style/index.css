@@ -42,21 +42,70 @@ header a , #slogan
     text-decoration: none;
     color: whitesmoke;
 }
+
+/* ---------------------------------------- */
+/* ==              CONTENT               */
+/*---------------------------------------- */
+.content
+{
+    padding-top: 112px;
+}
+
+
 /* NAVIGATION */
-
-.nav,#author
+#burger_menu
 {
+display:none;
+top:0;
+right:0;
+width:150px;
+height:200px;
+background-color:white;
+}
+.nav_menu
+{
+    display: none;
+}
+
+ 
+/* .nav_menu{
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+  }
+
+header .logo{
+    flex: 1;
+    color: rgb(2, 37, 18);
+    text-shadow: 0 0 2px #000;
+    margin-left: 50px;
+    }
+header ul{
+    flex: 2;
     display: flex;
-    justify-content: space-around;
-    padding: 10px;
-    list-style-type: none;
-    margin: 0px;
-}
-
-.nav li, header form
-{
-    padding: 10px;
-}
+    justify-content: space-evenly;
+    }
+.nav_menu{
+        list-style-type: none;
+        }
+.nav_menu a {
+     text-decoration: none;
+    color: rgb(2, 37, 18);
+    font-size: 1.2em;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 10px 15px;
+    }
+.nav_menu a:hover{
+    border-bottom: 2px solid cadetblue;
+        }
+header .nav_menu{
+    font-size: 2.5em;
+    display: none;
+    }
+ #chk1:checked ~ ul{
+        right: 0;
+        } */
 /* HOME PAGE SLOGAN */
 
 #slogan{
@@ -71,6 +120,12 @@ header a , #slogan
     width: 12%;
     border-radius: 18px;
 }
+
+ 
+/* ---------------------------------------- */
+/* ==              BOOKLIST               */
+/*---------------------------------------- */
+
 /* BOOK GALLERY LIST */
 .heading-title {
     font-size: 17px;
@@ -92,7 +147,11 @@ header a , #slogan
 
 }
 
-/* CONTACT FORM  */
+  
+/* ---------------------------------------- */
+/* ==           CONTACT PAGE              */
+/*---------------------------------------- */
+
 #contact_us{
     background-color :#234e4e61;
 }
@@ -113,7 +172,7 @@ header a , #slogan
     padding: 12px 20px;
     border: none;
     border-radius: 4px;
-    cursor: pointer; */
+    cursor: pointer; 
   }
   #contact_us input[type=submit]:hover {
     background-color:#294040;
@@ -132,12 +191,23 @@ header a , #slogan
         font-size: 64px;
         text-align: center;
     }
-    #contaAuthor
-    {
-    margin : 20%;
+        /* #contaAuthor
+        {
+        margin : 20%;
+        } */
+ 
+    #contact_us form {
+        background-color: rgba(255,255,255, .8);
+        /* width: 300px; */
+        height: 70%;
+        margin: 40px 150px;
+        padding: 20px;
+        padding-right: 30px;
+        border-radius: 3px
     }
-/* FOOTER */
-
+/* ---------------------------------------- */
+/* ==              FOOTER                */
+/*---------------------------------------- */
 footer, footer a {
     background-color: #292929;
     color: white;
@@ -153,17 +223,10 @@ footer, footer a {
     justify-content: center;
 }   
 
-#contact_us form {
-    background-color: rgba(255,255,255, .8);
-    /* width: 300px; */
-    height: 70%;
-    margin: 40px 150px;
-    padding: 20px;
-    padding-right: 30px;
-    border-radius: 3px
-}
+
 @media screen and (min-width: 1200px)
-{
+{ 
+
     header 
     {
     padding-top: 16px;
@@ -171,6 +234,57 @@ footer, footer a {
     justify-content: space-between;
     padding-bottom: 16px;
     }
-    
+
+    .nav_menu,#logo
+    {
+        display: flex;
+        justify-content: space-around;
+        padding: 10px;
+        list-style-type: none;
+        margin: 0px;
+    }
   
+    .nav_menu  li, header form
+    {
+        padding: 10px;
+    }
+    /* header 
+    {
+    padding-top: 16px;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 16px;
+    } */
+    #burger_action
+    {
+        display: none;
+    }
+    /* .menu_burger 
+    {
+        display: none;
+    }
+    header .nav_menu {
+        display: block;
+    } */
+    /* header ul {
+    position: fixed;
+    top:100px;
+    right: -100%;
+    background: whitesmoke;
+    height: calc(100vh - 100px);
+    width: 50%;
+    flex-direction: column;
+    align-items: center;
+    transition: right 0.5s linear;
+    }
+    #chk1:checked ~ ul{
+        right: 0;
+        }
+    .nav_menu li, header form
+    {
+        padding: 10px;
+    }
+    .nav_menu .menu-icon {
+        display: none;
+      }*/
 }
