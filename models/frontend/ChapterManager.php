@@ -28,6 +28,20 @@ class ChapterManagerFrontend
         return $result;
     }
 
+    function getRecentChapters()
+    {
+        $db = $this->dbConnect();
+        $req = $db->query('
+            SELECT *
+            FROM chapter 
+            ORDER BY published_date DESC 
+            LIMIT 2 
+        ');
+        $result = $req->fetchall();
+        $req->closeCursor();
+        return $result;
+    }
+
     private function dbConnect()
     {
         try

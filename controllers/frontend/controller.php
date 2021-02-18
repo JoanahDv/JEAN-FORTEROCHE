@@ -29,8 +29,11 @@ function contact()
 }
 
 function welcome()
-{
+{   
+    $chapterManager = new ChapterManagerFrontend();
+    $chapters = $chapterManager->getRecentChapters();
     require('views/frontend/welcome.php');
-
+   
 }
+
 ?>

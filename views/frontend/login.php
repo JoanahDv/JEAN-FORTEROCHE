@@ -2,7 +2,7 @@
 <?php $title = "Login" ;?>
 <?php ob_start(); ?>
 
-<form action="index.php?action=login " method="POST" style="padding-top:100px">
+<form action="index.php?action=login" method="POST" style="padding-top:100px">
   <div class="admin_container">
     <label for="uname"><b>Username</b></label>
     <input type="text" placeholder="Enter Username" name="uname" required>

@@ -11,8 +11,17 @@
 <label for="lname">Last Name</label>
 <input type="text" id="lname" name="lastname" placeholder="Your last name..">
 
-<label for="subject">Subject</label>
+<label for="lname">E-mail address</label>
+<input type="text" id="lname" name="lastname" placeholder="john@example.com">
+
+<label for="lname">Subject</label>
+<input type="text" id="lname" name="lastname" placeholder="subject">
+
+<label for="subject">Message</label>
 <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+
+
 
 <input type="checkbox">
 <label> I have read and agree to the Privacy Policy.</label></br>

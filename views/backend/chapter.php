@@ -11,5 +11,6 @@
     <textarea name='postCont' cols='60' rows='10'><?php if(isset($error)){ echo $_POST['postCont'];}?></textarea></p>
 
     <p><input type='submit' name='submit' value='Submit'></p>
+    
 
 </form>

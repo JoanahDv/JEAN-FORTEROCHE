@@ -9,9 +9,23 @@
         <br>
         <h2>A SIMPLE TICKET TO ALASKA </h2>
         <br>
-        <button class="startbutton">Start Here</button>
+        <a href="index.php?action=chapter"><button class= "startbutton">Start Here</button></a>
+
+
+        <!-- <a class="startbutton" href="index.php?action=chapter">Start Here</a> -->
+        <!-- <button class="startbutton">Start Here</button> -->
+
     </figcaption>
 </section>
+
+<section id="recent_posts">
+    <div class="container_post"> 
+        <h2 class="heading-sub-title accent-color">RECENT POSTS</h2>
+        <?php require('views/frontend/chapterList.php') ?>
+    </div>
+
+</section>
+
 
 <section id="booklist">
     <div class="container">
