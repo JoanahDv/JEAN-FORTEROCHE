@@ -28,7 +28,7 @@
 
 
 <section id="booklist">
-    <div class="container">
+    <div class="container_books">
         <div class="books-headings text-center">
             <h2 class="heading-sub-title accent-color">OTHER BOOKS</h2>
             <h3 class="heading-title">Discover other books.</h3>

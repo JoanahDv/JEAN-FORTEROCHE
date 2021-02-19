@@ -4,10 +4,11 @@
 body
 {
     font-family: 'Roboto',condensed;
-    width: 100%;
+    /* width: 100%; */
     margin: 0px;
     line-height: 23px;
     /* background-image: url("images/Alaskabg.jpg"); */
+
 
 }
 img{
@@ -20,7 +21,11 @@ img{
  margin: auto;
  width: 100%;
 }
- 
+ /* h1, .chapters_content h3 a{
+     color: white;
+ } */
+ .chapter_content h3
+
 /* ---------------------------------------- */
 /* ==              HEADER               */
 /*---------------------------------------- */
@@ -54,9 +59,23 @@ header a , #slogan
     background-size: cover;
 
 
+
+}
+.container_post h2
+{
+    background-color: #294040;
+    color: white;
+}
+.container_post
+{
+    background-color: #c3cece;
 }
 
-
+.container_books
+{
+    padding-top: 24px;
+    color: #ffe8e8;
+}
 /* NAVIGATION */
 #burger_menu
 {
@@ -239,6 +258,7 @@ footer, footer a {
     display: flex;
     justify-content: space-between;
     padding-bottom: 16px;
+    background-color:#294040;
     }
 
     .nav_menu,#logo
