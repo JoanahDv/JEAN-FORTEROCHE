@@ -1,6 +1,8 @@
 <?php
 
 require('models/frontend/ChapterManager.php');
+require('models/frontend/LoginManager.php');
+ 
 
 function author ()
 {
@@ -14,10 +16,11 @@ function chapter($id)
     require('views/frontend/chapter.php');
 }
 
-function chapters()
+function chapters($page)
 {
     $chapterManager = new ChapterManagerFrontend();
-    $chapters = $chapterManager->getChapters();
+    $chapters = $chapterManager->getChapters($page); // get chapters
+    $pages = $chapterManager->getChapterPagination(); // get page numbers
     require('views/frontend/chapters.php');
 }
 
@@ -36,4 +39,14 @@ function welcome()
    
 }
 
+function login($form_info)
+{
+    $LoginManager = new LoginManagerFrontend();
+    $username = $form_info['username'];
+    $password = $form_info['password'];
+    $user = $LoginManager->getUser($username, $password);
+    require('views/frontend/login.php');
+}
+
 ?>
+

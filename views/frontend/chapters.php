@@ -1,31 +1,29 @@
-
 <?php ob_start(); ?>
-
 <div class="chapters_content">
-        <h1>A SIMPLE TICKET TO ALASKA</h1>
-            <br>
-            <p>Every destination you’ll visit leaves its own unique memory.
-                Thinking back of our travels through Alaska already gives me the goosebumps. </br>
-                As this travel quote says:<i> Make memories all over the world!</i></p>
-            <br>
-        <div>
-            <?php require('views/frontend/chapterList.php') ?>
-        </div>
-</div>
-<!-- 
-<section id="homepage">
-    <figure>
-        <img src="public/images/chapteralaska.jpg" alt="Mountains of Alaska"> 
-    </figure>
-    <figcaption id="slogan">
-        <h1>A SIMPLE TICKET TO ALASKA</h1>
-        <br>
-        <p>Every destination you’ll visit leaves its own unique memory.
+    <h1>A SIMPLE TICKET TO ALASKA</h1>
+    <br>
+    <p><i>Every destination you’ll visit leaves its own unique memory.
             Thinking back of our travels through Alaska already gives me the goosebumps. </br>
-            As this travel quote says:<i> Make memories all over the world!</i></p>
-        <br>
-    </figcaption>
-</section> -->
+            As this travel quote says:Make memories all over the world!
+        </i>
+    </p>
+    <br>
+</div>
 
+<div class="all_chapters">
+    <h2 class="chapters_content_head">CHAPTERS</h2>
+    <div class="list">
+        <?php require('views/frontend/chapterList.php') ?>
+    </div>
+    <div class="pagination">
+        <?php for ($pageNumber = 1; $pageNumber <= $numberOfPages; $pageNumber = $pageNumber + 1) { ?>
+            <li class="page-item">
+                <a class="page-link" href="index.php?action=chapters&page=<?php echo $pageNumber ?>">
+                    <?php echo $pageNumber ?>
+                </a>
+            </li>
+        <?php } ?>
+    </div>
+</div>
 <?php $content = ob_get_clean(); ?>
-<?php require 'template.php'; ?>
+<?php require 'views/template.php'; ?>

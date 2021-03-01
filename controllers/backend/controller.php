@@ -2,11 +2,15 @@
 
 require('models/backend/ChapterManager.php');
 
-    function newChapter($parameters)
+    function newChapter($post_parameters)
     {
-        if (isset($parameters)) {
+        if (!empty($post_parameters)) {  // if form is submitted
             $chapterManager = new ChapterManagerBackend();
-            $chapterManager->createChapter($parameters['title'], $parameters['body'], $parameters['$published_Date'],$parameters['$number']);
+            $chapterManager->createChapter(
+                $post_parameters['title'],
+                $post_parameters['body'],
+                $post_parameters['number']
+            );
         }
         require('views/backend/chapter.php');
     }

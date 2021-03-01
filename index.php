@@ -7,7 +7,7 @@ error_reporting(E_ALL);
 require('configuration/config.php');
 require('controllers/frontend/controller.php');
 require('controllers/backend/controller.php');
-require('controllers/backend/login.php');
+// require('controllers/frontend/login.php');
  
 
 if (isset($_GET['action'])) { // action is set
@@ -16,9 +16,9 @@ if (isset($_GET['action'])) { // action is set
     } elseif ($_GET['action'] == 'chapter') {
         if (isset($_GET['id']) && $_GET['id'] > 0) {
             chapter($_GET['id']);
-        } else {
-            chapters();
         }
+    } elseif ($_GET['action'] == 'chapters'){
+        chapters($_GET['page']);
     } elseif ($_GET['action'] == 'contact') {
         contact();
     } elseif ($_GET['action'] == 'new_chapter') {
@@ -32,4 +32,5 @@ if (isset($_GET['action'])) { // action is set
 } else { // no action is set
     welcome(); // default to welcome page
 }
+
 ?>
