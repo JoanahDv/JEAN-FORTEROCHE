@@ -3,27 +3,12 @@
 
     class CommentManagerBackend
     {
-        function creatcomment($comment, $comment_date, $author) 
+       
+        public function getComment($id)
         {
-            function creatcomment($comment, $comment_date, $author) 
-            {
-              global $db; // defined in models/connect.php
-              $comment= $db->prepare('INSERT INTO comments(comment, comment_date, author) VALUES(?, ?, NOW(), ?');
-              $affectedLines = $comment->execute(array($comment, $comment_date, $author));
-            //   return $result; 
-            } 
-           
-            // global $db; // defined in models/connect.php
-            // insert image then get image_id
-            // insert chapter with function parameters plus image_id
-            // $comments = $db->prepare('INSERT INTO comments(post_id, author, comment, comment_date) VALUES(?, ?, ?, NOW())');
-            // $affectedLines = $comments->execute(array($postId, $author, $comment));
-            // return $result; 
-        }       
-        function getComment($id) {
             // use global $conn object in function
             global $db;
-            $sql = "SELECT * FROM comments WHERE id = $id";
+            $sql = "SELECT * FROM comment WHERE id = $id";
             $result = mysqli_query($db, $sql);
         
             // fetch all posts as an associative array called $posts
@@ -32,24 +17,28 @@
             return $comments;
         }
         
-
-        function deleteComment($id) {
+        public function deleteComment($id)
+        {
             // use global $conn object in function
             global $db;
-            $sql = "DELETE FROM comments WHERE id= $id";
+            $sql = "DELETE FROM comment WHERE id= $id";
             if (mysqli_query($db, $sql)) {
-              echo "Record deleted successfully";
+                echo "Record deleted successfully";
             } else {
-              echo "Error deleting record: " . mysqli_error($db);
+                echo "Error deleting comment: " . mysqli_error($db);
             }
         }
-
-        // function editChapter($id, $title, $body, $published_date, $number)
+        // public function validateComment($id)
         // {
+        //     // use global $conn object in function
+        //     global $db;
+        //     $sql = "DELETE FROM comments WHERE id= $id";
+        //     if (mysqli_query($db, $sql)) {
+        //         echo "Record deleted successfully";
+        //     } else {
+        //         echo "Error deleting record: " . mysqli_error($db);
+        //     }
         // }
-
-        // function deleteChapter($id)
-        // {
-        // }
+       
     }
 ?>

@@ -13,8 +13,8 @@ require('models/backend/ChapterManager.php');
             );
         }
         require('views/backend/chapter.php');
+   
     }
 
-// require('models/backend/login.php')
-?>
+ ?>
 

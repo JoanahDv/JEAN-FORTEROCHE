@@ -1,4 +1,5 @@
 <?php
+require('models/connect.php');
 
 class LoginManagerFrontend
 {
@@ -14,5 +15,6 @@ class LoginManagerFrontend
         $req->closeCursor();
         return $result;
     }
+    
 }
 ?>

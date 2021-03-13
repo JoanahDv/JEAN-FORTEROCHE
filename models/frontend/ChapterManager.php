@@ -67,3 +67,4 @@ class ChapterManagerFrontend
         return $result;
     }
 }
+?>

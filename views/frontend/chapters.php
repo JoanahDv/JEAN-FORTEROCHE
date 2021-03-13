@@ -13,7 +13,7 @@
 <div class="all_chapters">
     <h2 class="chapters_content_head">CHAPTERS</h2>
     <div class="list">
-        <?php require('views/frontend/chapterList.php') ?>
+         <?php require('views/frontend/chapterList.php') ?>
     </div>
     <div class="pagination">
         <?php for ($pageNumber = 1; $pageNumber <= $numberOfPages; $pageNumber = $pageNumber + 1) { ?>
@@ -23,6 +23,8 @@
                 </a>
             </li>
         <?php } ?>
+        <h1>Leave a comment</h1>
+
     </div>
 </div>
 <?php $content = ob_get_clean(); ?>

@@ -16,20 +16,30 @@ if (isset($_GET['action'])) { // action is set
     } elseif ($_GET['action'] == 'chapter') {
         if (isset($_GET['id']) && $_GET['id'] > 0) {
             chapter($_GET['id']);
-        }
+         }
+
+    //comment form
+    // } else if ($_GET)
     } elseif ($_GET['action'] == 'chapters'){
         chapters($_GET['page']);
-    } elseif ($_GET['action'] == 'contact') {
-        contact();
     } elseif ($_GET['action'] == 'new_chapter') {
         newChapter($_POST);
+    }
+    elseif($_GET['action'] == 'comment'){
+        comment($_POST);
+
+        // CONTACT FORM
+    }elseif ($_GET['action'] == 'contact') {
+        contact($_POST); // adding all parameters in contact.php front end
+    
     } elseif ($_GET['action'] == 'login'){
         login($_POST);
     } else { // unknown action
-        echo 'Erreur : action inconnue';
+        echo 'Erreur : action inconnue : ' . $_GET['action'];
         die();
     }
-} else { // no action is set
+}
+else { // no action is set
     welcome(); // default to welcome page
 }
 

@@ -8,16 +8,24 @@
             As this travel quote says:Make memories all over the world!
         </i>
     </p>
-    <br>
+</div>
+<div class="content">
+    <?php echo $chapter['number'] ?><br>
+    <h1><?php echo $chapter['title'] ?></h1><br>
+    <?php echo $chapter['body'] ?><br>
+    <?php echo $chapter['published_date'] ?><br>
+    <img src="<?php echo $chapter['image'] ?>" /><br>
 </div>
 
-<div class="content">
-    <h1><?php echo $chapter['title'] ?></h1>
-    <?php echo $chapter['body'] ?>
-    <?php echo $chapter['published_date'] ?>
-    <img src="<?php echo $chapter['image'] ?>" />
-    <?php echo $chapter['number'] ?>
+<div class="commentListContent">
+    <?php require 'views/frontend/commentList.php'; ?>
 </div>
+
+<div class="commentSection">
+    <h2>Leave a comment</h2>
+    <?php require 'views/frontend/comment.php'; ?>
+</div>
+
 
 <?php $content = ob_get_clean(); ?>
 <?php require 'views/template.php'; ?>

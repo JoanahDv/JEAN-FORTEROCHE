@@ -10,7 +10,6 @@
     <div class="admin_container">
 
       <label for="uname"><b>USERNAME</b></label><br>
-
       <input type="text" placeholder="Enter Username" name="uname" required>
        <br><br>
 

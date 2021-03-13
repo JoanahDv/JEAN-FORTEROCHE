@@ -20,13 +20,16 @@ if (isset($_GET['action'])) { // action is set
     } elseif ($_GET['action'] == 'chapters') {
         chapters($_GET ['page']);
     } elseif ($_GET['action'] == 'contact') {
-        contact();
+        contact($_POST);
     } elseif ($_GET['action'] == 'new_chapter') {
         newChapter($_POST);
+    
+    }elseif($_GET['action'] == 'comment'){
+            comment($_POST);
     } elseif ($_GET['action'] == 'login'){
         login($_POST);
     } else { // unknown action
-        echo 'Erreur : action inconnue';
+        echo 'Erreur : action inconnue : ' . $_GET['action'];
         die();
     }
 } else { // no action is set
