@@ -4,6 +4,7 @@ require('models/frontend/ChapterManager.php');
 require('models/frontend/LoginManager.php');
 require('models/frontend/contactManager.php');
 require('models/frontend/commentManager.php');
+ 
 
 
  
@@ -39,16 +40,17 @@ function contact($post_parameters)
                 $post_parameters['firstname'],
                 $post_parameters['lastname'],
                 $post_parameters['email'],
-                $post_parameters['topic'],
-                $post_parameters['message']
+                $post_parameters['subject'],
+                $post_parameters['messagebox']
 
             );
+            echo 'ok';
+            die();
         }
-
+        
     require('views/frontend/contact.php');
 
 }
-
 function welcome()
 {   
     $chapterManager = new ChapterManagerFrontend();
@@ -57,16 +59,20 @@ function welcome()
    
 }
 
-function login($form_info)
+function login($post_parameters)
 {
-    $LoginManager = new LoginManagerFrontend();
-    $username = $form_info['uname'];
-    $password = $form_info['psw'];
-    $user = $LoginManager->getUser($username, $password);
+    if (!empty($post_parameters)) {  // if form is submitted
+        //$LoginManager = new LoginManagerFrontend();
+        //$username = $form_info['uname'];
+        //$password = $form_info['psw'];
+        //$user = $LoginManager->getUser($username, $password);
+        header('Location:/index.php?action=dashboard');  // redirect
+        exit();
+    }
     require('views/frontend/login.php');
 }
- function comment($post_parameters)
- {
+function comment($post_parameters)
+{
     if (!empty($post_parameters)) {  // if form is submitted
         $commentManager = new commentManagerFrontend();
         $commentManager->createComment(
@@ -74,11 +80,10 @@ function login($form_info)
             $post_parameters['comment_author'],
             $post_parameters['email'],
             $post_parameters['chapterid']
-
-
-        );  
+        );
     }
     require('views/frontend/comment.php');
- }
+}
+  
 ?>
 

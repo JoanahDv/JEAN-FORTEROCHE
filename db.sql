@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:8889
--- Generation Time: Mar 07, 2021 at 02:42 PM
+-- Generation Time: Mar 14, 2021 at 07:45 PM
 -- Server version: 5.7.32
 -- PHP Version: 7.4.12
 
@@ -36,7 +36,7 @@ CREATE TABLE `chapter` (
 --
 
 INSERT INTO `chapter` (`id`, `title`, `body`, `published_date`, `number`, `image`, `draft`, `publish`) VALUES
-(1, 'WITH PASCIN AT THE DOME', 'It was a lovely evening and I had worked hard all day and left the flat over the sawmill and walked out through the courtyard with the stacked lumber, closed the door, crossed the street and went into the back door of the bakery that fronted on the Boulevard Montparnasse and out through the good bread smells of the ovens and the shop to the street. The lights were on in the bakery and outside it was the end of the day and I walked in the early dusk up the street and stopped outside the terrace of the Nègre de Toulouse restaurant where our red and white checkered napkins were in the wooden napkin rings in the napkin rack waiting for us to come to dinner. I read the menu mimeographed in purple ink and saw that the plat du jour was cassoulet. It made me hungry to read the name.\r\n\r\nMr. Lavigne, the proprietor, asked me how my work had gone and I said it had gone very well. He said he had seen me working on the terrace of the Closerie des Lilas early in the morning but he had not spoken to me because I was so occupied.\r\n\r\n“You had the air of a man alone in the jungle,” he said.\r\n\r\n“I am like a blind pig when I work.”\r\n\r\n“But were you not in the jungle, Monsieur?”\r\n\r\n“In the bush,” I said.\r\n\r\nI went on up the street looking in the windows and happy with the spring evening and the people coming past. In the three principal cafés I saw people that I knew by sight and others that I knew to speak to. But there were always much nicer-looking people that I did not know that, in the evening with the lights just coming on, were hurrying to some place to drink together, to eat together and then to make love. The people in the principal cafés might do the same thing or they might just sit and drink and talk and love to be seen by others. The people that I liked and had not met went to the big cafés because they were lost in them and no one noticed them and they could be alone in them and be together. The big cafés were cheap then too, and all had good beer and the apéritifs cost reasonable prices that were clearly marked on the saucers that were served with them.', '2021-01-17', 1, 'https://images.unsplash.com/photo-1504979489322-bfab450b252d?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80', 0, 0),
+(1, 'WITH PASCIN AT THE DOME', 'It was a lovely evening and I had worked hard all day and left the flat over the sawmill and walked out through the courtyard with the stacked lumber, closed the door, crossed the street and went into the back door of the bakery that fronted on the Boulevard.\r\n\r\nMontparnasse and out through the good bread smells of the ovens and the shop to the street. \r\n\r\nThe lights were on in the bakery and outside it was the end of the day and I walked in the early dusk up the street and stopped outside the terrace of the   temps de Toulouse restaurant where our red and white checkered napkins were in the wooden napkin rings in the napkin rack waiting for us to come to dinner. I read the menu mimeographed in purple ink and saw that the plat du jour was cassoulet.\r\nIt made me hungry to read the name.\r\n\r\nMr. Lavigne, the proprietor, asked me how my work had gone and I said it had gone very well. He said he had seen me working on the terrace of the Closerie des Lilas early in the morning but he had not spoken to me because I was so occupied.\r\n\r\n“You had the air of a man alone in the jungle,” he said.\r\n\r\n“I am like a blind pig when I work.”\r\n\r\n“But were you not in the jungle, Monsieur?”\r\n\r\n“In the bush,” I said.\r\n\r\nI went on up the street looking in the windows and happy with the spring evening and the people coming past. In the three principal cafés I saw people that I knew by sight and others that I knew to speak to. But there were always much nicer-looking people that I did not know that, in the evening with the lights just coming on, were hurrying to some place to drink together, to eat together and then to make love. The people in the principal cafés might do the same thing or they might just sit and drink and talk and love to be seen by others. \r\n\r\n\r\nThe people that I liked and had not met went to the big cafés because they were lost in them and no one noticed them and they could be alone in them and be together. The big cafés were cheap then too, and all had good beer and the apéritifs cost reasonable prices that were clearly marked on the saucers that were served with them.', '2021-01-17', 1, 'https://images.unsplash.com/photo-1504979489322-bfab450b252d?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80', 0, 0),
 (3, 'SETTLING IN', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum', '2021-01-17', 2, 'https://images.unsplash.com/photo-1527796087574-4aa5c69d5fd2?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80', 0, 0),
 (8, 'A GOOD CAFE\r\n', '<p>It was a pleasant caf&eacute;, warm and clean and friendly, and I hung up my old waterproof on the coat rack to dry and put my worn and weathered felt hat on the rack above the bench and ordered a <span class=\"it\">caf&eacute; au lait</span>. The waiter brought it and I took out a notebook from the pocket of the coat and a pencil and started to write. I was writing about up in Michigan and since it was a wild, cold, blowing day it was that sort of day in the story. I had already seen the end of fall come through boyhood, youth, and young manhood, and in one place you could write about it better than in another. That was called transplanting yourself, I thought, and it could be as necessary with people as with other sorts of growing things. But in the story, the boys were drinking and this made me thirsty and I ordered a rum St. James. This tasted wonderful on a cold day and I kept on writing, feeling very well and feeling the good Martinique rum warm me all through my body and my spirit.</p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>', '2021-02-21', 3, 'https://images.unsplash.com/photo-1445116572660-236099ec97a0?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1502&q=80', 0, 0),
 (9, 'A FALSE SPRING IN ALASKA', '<p class=\"noindent\">When spring came, even the false spring, there were no problems except where to be happiest. The only thing that could spoil a day was people and if you could keep from making engagements, each day had no limits. People were always the limiters of happiness except for the very few that were as good as spring itself.</p>\r\n<p class=\"pindent\">In the spring mornings, I would work early while my wife still slept. The windows were open wide and the cobbles of the street were drying after the rain. The sun was drying the wet faces of the houses that faced the window. The shops were still shuttered. The goatherd came up the street blowing his pipes and a woman who lived on the floor above us came out onto the sidewalk with a big pot. The goatherd chose one of the heavy-bagged, black milk-goats and milked her into the pot while his dog pushed the others onto the sidewalk. The goats looked around, turning their necks like sight-seers. The goatherd took the money from the woman and thanked her and went on up the street piping and the dog herded the goats on ahead, their horns bobbing. I went back to writing and the woman came up the stairs with the goat milk. She wore her felt-soled cleaning shoes and I only heard her breathing as she stopped on the stairs outside our door and then the shutting of her door. She was the only customer for goat milk in our building.</p>', '2021-02-21', 4, 'https://images.unsplash.com/photo-1431698194201-465e7d003539?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1504&q=80', 0, 0),
@@ -60,11 +60,21 @@ CREATE TABLE `comment` (
   `chapter_id` int(11) NOT NULL,
   `comment` text NOT NULL,
   `comment_date` datetime NOT NULL,
-  `author` varchar(11) NOT NULL,
-  `validate` tinyint(1) NOT NULL,
-  `signal` tinyint(1) NOT NULL,
-  `validated` tinyint(1) NOT NULL
+  `author` text NOT NULL,
+  `to_validate` tinyint(1) NOT NULL DEFAULT '1',
+  `flag` tinyint(1) NOT NULL DEFAULT '0',
+  `validated` tinyint(1) NOT NULL DEFAULT '1',
+  `email` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `comment`
+--
+
+INSERT INTO `comment` (`id`, `parent_id`, `chapter_id`, `comment`, `comment_date`, `author`, `to_validate`, `flag`, `validated`, `email`) VALUES
+(10, NULL, 1, 'Love this Chapter, beautifully written. Thank you.', '2021-03-13 00:00:00', 'Jane', 1, 0, 1, 'jane@yahoo.com'),
+(11, NULL, 3, 'nice', '2021-03-13 19:03:19', 'john', 1, 0, 1, 'smith@yahoo.com'),
+(12, NULL, 10, 'Great chapter! thank you', '2021-03-13 19:09:48', 'Anthony', 1, 0, 1, 'anthony@gmail.com');
 
 -- --------------------------------------------------------
 
@@ -139,7 +149,7 @@ ALTER TABLE `chapter`
 -- AUTO_INCREMENT for table `comment`
 --
 ALTER TABLE `comment`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `user`

@@ -16,5 +16,8 @@ require('models/backend/ChapterManager.php');
    
     }
 
+    function dashboard()
+    
+
  ?>
 

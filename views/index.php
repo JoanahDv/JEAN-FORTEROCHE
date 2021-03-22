@@ -25,7 +25,7 @@ if (isset($_GET['action'])) { // action is set
         newChapter($_POST);
     
     }elseif($_GET['action'] == 'comment'){
-            comment($_POST);
+        comment($_POST);
     } elseif ($_GET['action'] == 'login'){
         login($_POST);
     } else { // unknown action

@@ -4,7 +4,7 @@
 <div class="parallax"></div>
 <section id="homepage">
     <!-- <figure>
-        <img src="public/images/Alaskaimage.jpg" alt="Mountains of Alaska"> 
+       
     </figure> -->
     <figcaption id="slogan">
         <h1>JEAN FORTEROCHE</h1>

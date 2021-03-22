@@ -1,14 +1,13 @@
 <?php foreach ($chapterComments as $comment) { ?>
-
-    <section id="chapterComments">
-
+    
         <div class="comment_content">
-            <?php echo $comment['author'] ?><br>
+            <h3><?php echo $comment['author'] ?></h3>
 
-            <?php echo $comment['comment_date'] ?><br>
-
-            <?php echo $comment['comment'] ?>
-            
+             <?php echo $comment['comment'] ?><br>
+             <i> publish on 
+                <?php echo $comment['comment_date'] ?></i>
+            <br>
+     
         </div>
-    </section>
-<?php } ?>
+     
+    <?php } ?>

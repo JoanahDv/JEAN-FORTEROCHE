@@ -34,8 +34,17 @@ if (isset($_GET['action'])) { // action is set
     
     } elseif ($_GET['action'] == 'login'){
         login($_POST);
+
+    } elseif ($_GET['action'] == 'dashboard') {
+        dashboard($_POST);
+        
+        //backend 
+
+    }elseif ($_GET ['action'] == 'comments'){
+        // comments($_POST);
+    
     } else { // unknown action
-        echo 'Erreur : action inconnue : ' . $_GET['action'];
+        echo 'error';
         die();
     }
 }

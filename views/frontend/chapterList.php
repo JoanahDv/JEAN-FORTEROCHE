@@ -7,20 +7,21 @@
             <div class="chapter_contents">
                 <h3>
                     <a href="/index.php?action=chapter&id=<?php echo $chapter['id'] ?>">
-                        <?php echo $chapter['title'] ?>
+                        <?php echo  $chapter['title'] ?>
                     </a>
                 </h3>
 
                 <i>Chapter <?php echo $chapter['number'] ?></i><br>    
 
 
-                <?php echo $chapter['title'] ?> <br>
-                <div class="body_text">
+                 <div class="body_text">
                     <?php echo substr($chapter['body'], 0, 200) ?>...
                 </div>
                 <br>    
         
                 <a href="/index.php?action=chapter&id=<?php echo $chapter['id'] ?>">
+                 
+                
                 <a>Published <?php echo $chapter['published_date'] ?></a><br>    
 
                 <a href="/index.php?action=chapter&id=<?php echo $chapter['id'] ?>">

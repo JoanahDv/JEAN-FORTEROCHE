@@ -17,12 +17,12 @@
     <img src="<?php echo $chapter['image'] ?>" /><br>
 </div>
 
-<div class="commentListContent">
+<section id="commentListContent">
+    <h2> Comments </h2>
     <?php require 'views/frontend/commentList.php'; ?>
-</div>
+</section>
 
 <div class="commentSection">
-    <h2>Leave a comment</h2>
     <?php require 'views/frontend/comment.php'; ?>
 </div>
 

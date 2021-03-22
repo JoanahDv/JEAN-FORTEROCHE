@@ -5,18 +5,21 @@
     <div class="chapters_content">
         <h1>Get in touch</h1>
         <br>
-        <p><i>Every destination you’ll visit leaves its own unique memory.
+        <p>
+            <i>Every destination you’ll visit leaves its own unique memory.
                 Thinking back of our travels through Alaska already gives me the goosebumps. </br>
                 As this travel quote says:Make memories all over the world!
             </i>
         </p>
+
         <br>
     </div>
 
     <div class="container_contact">
         <h3>Contact Us</h3>
+        <p id="success">Thank you! <br>Your comment has been sent.</p>
 
-        <form action="/index.php?action=contact" method="POST">
+        <form action="/index.php?action=contact" method="POST" id = "contactForm">
 
             <label for="fname">First Name</label>
             <input type="text" id="fname" name="firstname" placeholder="Your name.." required>
@@ -28,10 +31,10 @@
             <input type="text" id="email" name="email" placeholder="john@example.com" required>
 
             <label for="topic">Subject</label>
-            <input type="text" id="topic" name="topic" placeholder="subject" required>
+            <input type="text" id="subject" name="subject" placeholder="subject" required>
 
-            <label for="subject">Message</label>
-            <textarea id="subject" name="message" placeholder="Write something.." style="height:200px" required></textarea>  
+            <label for="messagetext">Message</label>
+            <textarea id="messagetext" name="messagebox" placeholder="Write something.." style="height:200px" required></textarea>
 
             <input type="checkbox">
             <label> I have read and agree to the Privacy Policy.</label></br>
@@ -42,3 +45,6 @@
 </section>
 <?php $content = ob_get_clean(); ?>
 <?php require 'views/template.php'; ?>
+
+
+

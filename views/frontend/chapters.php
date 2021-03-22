@@ -23,7 +23,6 @@
                 </a>
             </li>
         <?php } ?>
-        <h1>Leave a comment</h1>
 
     </div>
 </div>

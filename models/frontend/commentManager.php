@@ -11,11 +11,11 @@ class commentManagerFrontend
     }
 
     public function createComment($comment, $author,  $email, $chapter_id) {
-        // function creatcomment($comment, $comment_date, $author)
+        // function creatcomment($comment, $comment_date,$comment_time, $author)
         
           global $db; // defined in models/connect.php
           $sql = $db->prepare('
-            INSERT INTO comment (comment, author, email, comment_date, chapter_id) 
+            INSERT INTO comment (comment, author, email, comment_date,chapter_id) 
             VALUES(?, ?, ?, NOW(), ?)
           ');
           $affectedLines = $sql->execute(array($comment, $author, $email, $chapter_id));
