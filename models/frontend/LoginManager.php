@@ -11,7 +11,8 @@ class LoginManagerFrontend
             FROM user
             WHERE username = ? AND password = ?
         ');
-        $result = $req->execute(array($username, $password));
+        $req->execute(array($username, $password));
+        $result = $req->fetch(); // fetch result
         $req->closeCursor();
         return $result;
     }

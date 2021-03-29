@@ -7,6 +7,8 @@
              <i> publish on 
                 <?php echo $comment['comment_date'] ?></i>
             <br>
+            <input name="flag" type="submit" value="flag" /><br>
+
      
         </div>
      

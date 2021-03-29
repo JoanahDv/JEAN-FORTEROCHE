@@ -9,7 +9,9 @@
                         <?php echo  $chapter['title'] ?>
                     </a>
                 </h3>
+
                 <i>Chapter <?php echo $chapter['number'] ?></i><br>
+
 
                 <div class="body_text">
                     <?php echo substr($chapter['body'], 0, 200) ?>...
@@ -31,6 +33,7 @@
                         </div>
             </div>
         </div>
+
 
     </div>
 <?php } ?>

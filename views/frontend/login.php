@@ -10,14 +10,14 @@
     <div class="admin_container">
 
       <label for="uname"><b>USERNAME</b></label><br>
-      <input type="text" placeholder="Enter Username" name="uname" required>
+      <input type="username" placeholder="Enter Username" name="uname" required>
        <br><br>
 
       <label for="psw"><b>PASSWORD</b></label><br>
 
       <input type="password" placeholder="Enter Password" name="psw" required>
         <br><br>  
-      <input type="submit" />
+      <input class ="loginSubmit"type="submit" />
 
     </div>
     <br><br>  
@@ -35,6 +35,12 @@
     </div>
 
   </form>
+  <?php
+  if ($message){
+    echo $message;
+  }
+
+   ?>
 
 </section>
 

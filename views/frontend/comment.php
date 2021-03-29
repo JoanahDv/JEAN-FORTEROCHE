@@ -20,6 +20,7 @@
             <textarea name="comment" id="comment" rows="10" tabindex="4" required="required"></textarea><br>
 
             <input name="submit" type="submit" value="Submit comment" /><br>
+ 
 
         </form>
     </section>

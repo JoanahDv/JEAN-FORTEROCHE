@@ -20,8 +20,6 @@ $(document).ready(function() {
         content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:14px }'
     });
 
-
-
     $("#contactForm").submit(function(event) {
         event.preventDefault(); // prevent regular form submit
         // submit form using AJAX
@@ -35,6 +33,7 @@ $(document).ready(function() {
             }
         });
     });
+
     $("#commentform").submit(function(event) {
         event.preventDefault(); // prevent regular form submit
         // submit form using AJAX
@@ -49,6 +48,24 @@ $(document).ready(function() {
         });
     });
 
+    $("#chapterList").hide();
+    $("#commentList").hide();
+    $("#newChapter").hide();
+    $(".dashboardChapters a").click(function(event) {
+        $("#chapterList").show();
+        $("#commentList").hide();
+        $("#newChapter").hide();
+    });
+    $(".dashboardComment a").click(function(event) {
+        $("#chapterList").hide();
+        $("#commentList").show();
+        $("#newChapter").hide();
+    });
+    $(".dashboardnewChapter a").click(function(event) {
+        $("#chapterList").hide();
+        $("#commentList").hide();
+        $("#newChapter").show();
+    });
 
 
 

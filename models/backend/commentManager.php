@@ -16,6 +16,19 @@
         
             return $comments;
         }
+
+       
+        public function getComments(){
+            global $db;
+            $req = $db->prepare('
+          SELECT *
+          FROM comment');
+            $req->execute();
+            $comments = $req->fetchAll();
+            $req->closeCursor();
+            return $comments;
+    
+         }
         
         public function deleteComment($id)
         {
@@ -28,17 +41,18 @@
                 echo "Error deleting comment: " . mysqli_error($db);
             }
         }
-        // public function validateComment($id)
-        // {
-        //     // use global $conn object in function
-        //     global $db;
-        //     $sql = "DELETE FROM comments WHERE id= $id";
-        //     if (mysqli_query($db, $sql)) {
-        //         echo "Record deleted successfully";
-        //     } else {
-        //         echo "Error deleting record: " . mysqli_error($db);
-        //     }
-        // }
+
+        public function validateComment($id)
+        {
+            // use global $conn object in function
+            global $db;
+            $sql = "VALIDATE FROM comments WHERE id= $id";
+            if (mysqli_query($db, $sql)) {
+                echo "Record deleted successfully";
+            } else {
+                echo "Error deleting record: " . mysqli_error($db);
+            }
+        }
        
     }
 ?>

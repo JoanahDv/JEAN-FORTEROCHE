@@ -1,5 +1,5 @@
+<?php $title = "Chapter"; ?>
 <?php ob_start(); ?>
-
 <div class="chapters_content">
     <h1>A SIMPLE TICKET TO ALASKA</h1>
     <br>

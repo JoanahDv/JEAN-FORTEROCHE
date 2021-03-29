@@ -27,6 +27,18 @@
       return $chapter;
     }
 
+    function getChapters(){
+        global $db;
+        $req = $db->prepare('
+      SELECT *
+      FROM chapter');
+        $req->execute();
+        $chapters = $req->fetchAll();
+        $req->closeCursor();
+        return $chapters;
+
+     }
+      
     function deleteChapter($id)
     {
       // use global $conn object in function
@@ -48,6 +60,11 @@
 
       return $chapters;
     }
+    
+    // function updateChapter()
+     
+
+
     //FOR COMMENT
 
     function addComment($chapter_id, $comment, $author)

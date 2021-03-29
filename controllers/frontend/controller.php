@@ -61,16 +61,37 @@ function welcome()
 
 function login($post_parameters)
 {
-    if (!empty($post_parameters)) {  // if form is submitted
-        //$LoginManager = new LoginManagerFrontend();
-        //$username = $form_info['uname'];
-        //$password = $form_info['psw'];
-        //$user = $LoginManager->getUser($username, $password);
-        header('Location:/index.php?action=dashboard');  // redirect
-        exit();
+    if (!empty($post_parameters)) {   // if form is submitted
+        $LoginManager = new LoginManagerFrontend();
+   
+        $username = $post_parameters['uname'];
+         $password = $post_parameters['psw'];
+         $user = $LoginManager->getUser($username, $password);
+         if($user) 
+        {   
+            session_start();
+            $_SESSION['loggedin'] = True;
+            header('Location:/index.php?action=dashboard'); // redirect
+
+            exit();
+        }
+        else $message = "Username and Password is incorrect";
     }
     require('views/frontend/login.php');
+
 }
+// function login($post_parameters)
+// {
+//     if (!empty($post_parameters)) {  // if form is submitted
+//         // $LoginManager = new LoginManagerFrontend();
+//         // $username = $form_info['uname'];
+//         // $password = $form_info['psw'];
+//         // $user = $LoginManager->getUser($username, $password);
+//         header('Location:/index.php?action=dashboard');  // redirect
+//         exit();
+//     }
+//     require('views/frontend/login.php');
+// }
 function comment($post_parameters)
 {
     if (!empty($post_parameters)) {  // if form is submitted
