@@ -9,7 +9,5 @@
             <br>
             <input name="flag" type="submit" value="flag" /><br>
 
-     
         </div>
-     
     <?php } ?>

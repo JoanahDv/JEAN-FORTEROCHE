@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:8889
--- Generation Time: Mar 14, 2021 at 07:45 PM
+-- Generation Time: Apr 02, 2021 at 07:42 PM
 -- Server version: 5.7.32
 -- PHP Version: 7.4.12
 
@@ -74,7 +74,16 @@ CREATE TABLE `comment` (
 INSERT INTO `comment` (`id`, `parent_id`, `chapter_id`, `comment`, `comment_date`, `author`, `to_validate`, `flag`, `validated`, `email`) VALUES
 (10, NULL, 1, 'Love this Chapter, beautifully written. Thank you.', '2021-03-13 00:00:00', 'Jane', 1, 0, 1, 'jane@yahoo.com'),
 (11, NULL, 3, 'nice', '2021-03-13 19:03:19', 'john', 1, 0, 1, 'smith@yahoo.com'),
-(12, NULL, 10, 'Great chapter! thank you', '2021-03-13 19:09:48', 'Anthony', 1, 0, 1, 'anthony@gmail.com');
+(12, NULL, 10, 'Great chapter! thank you', '2021-03-13 19:09:48', 'Anthony', 1, 0, 1, 'anthony@gmail.com'),
+(13, NULL, 3, 'Merci', '2021-03-15 17:09:13', 'Steph', 1, 0, 1, 'steph@yahoo.com'),
+(14, NULL, 3, 'kkggjgj', '2021-03-15 19:29:07', 'jgj', 1, 0, 1, 'jh@yahoo.com'),
+(15, NULL, 3, 'v', '2021-03-15 19:42:50', ',bh', 1, 0, 1, 'hc@gf.ki'),
+(16, NULL, 3, 'sdfsdf', '2021-03-15 19:49:21', 'asdf', 1, 0, 1, 'sdf@jdhf.fr'),
+(17, NULL, 3, 'sdf', '2021-03-15 19:54:33', 'sadf', 1, 0, 1, 'sadf@sf.fr'),
+(18, NULL, 3, 'sdf', '2021-03-15 19:57:45', 'asdf', 1, 0, 1, 'sdhjfl@jsdf.fr'),
+(19, NULL, 3, 'qwertyu', '2021-03-17 16:09:57', 'xqwert', 1, 0, 1, 'qwerty@yahoo.com'),
+(26, NULL, 10, 'Love it', '2021-03-22 11:28:02', 'dklsdnk', 1, 0, 1, 'yes@yahoo.com'),
+(27, NULL, 10, 'Great chapter', '2021-03-22 11:28:53', 'yahoo', 1, 0, 1, 'kdd@yahoo.com');
 
 -- --------------------------------------------------------
 
@@ -83,13 +92,24 @@ INSERT INTO `comment` (`id`, `parent_id`, `chapter_id`, `comment`, `comment_date
 --
 
 CREATE TABLE `contact` (
-  `contact_id` int(11) NOT NULL,
+  `id` int(11) NOT NULL,
   `first_name` text NOT NULL,
   `last_name` text NOT NULL,
   `email` varchar(50) NOT NULL,
-  `title` text NOT NULL,
+  `subject` text NOT NULL,
   `message` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `contact`
+--
+
+INSERT INTO `contact` (`id`, `first_name`, `last_name`, `email`, `subject`, `message`) VALUES
+(1, 'asf', 'asdf', 'sf@sf.fr', 'sdaf', 'dfz'),
+(2, 'asf', 'asdf', 'sf@sf.fr', 'sdaf', 'dfz'),
+(3, 'asf', 'asdf', 'sf@sf.fr', 'sdaf', 'dfz'),
+(4, 'JTF', 'jgkjh', 'ajtd@sfr.com', 'khgh', 'hkjk.k'),
+(5, 'kllk', 'jb.kj', 'sjsjsjs@yahoo.com', 'sjsjsjssjs', 'sksksksks');
 
 -- --------------------------------------------------------
 
@@ -108,7 +128,7 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id`, `username`, `password`) VALUES
-(1, 'project4', 'jforterochep4');
+(1, 'jo', '123');
 
 --
 -- Indexes for dumped tables
@@ -127,6 +147,12 @@ ALTER TABLE `comment`
   ADD PRIMARY KEY (`id`),
   ADD KEY `chapter_id` (`chapter_id`),
   ADD KEY `parent_id` (`parent_id`);
+
+--
+-- Indexes for table `contact`
+--
+ALTER TABLE `contact`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `user`
@@ -149,7 +175,13 @@ ALTER TABLE `chapter`
 -- AUTO_INCREMENT for table `comment`
 --
 ALTER TABLE `comment`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+
+--
+-- AUTO_INCREMENT for table `contact`
+--
+ALTER TABLE `contact`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `user`

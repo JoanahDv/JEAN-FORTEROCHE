@@ -24,4 +24,4 @@
     </div>
 </section>
 <?php $content = ob_get_clean(); ?>
-<?php require 'views/template.php'; ?>
+<?php require 'views/frontend/template.php'; ?>

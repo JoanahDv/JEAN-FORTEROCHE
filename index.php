@@ -6,10 +6,10 @@ error_reporting(E_ALL);
 require('configuration/config.php');
 require('controllers/frontend/controller.php');
 require('controllers/backend/controller.php');
- 
 
- // require('controllers/frontend/login.php');
- 
+
+// require('controllers/frontend/login.php');
+
 if (isset($_GET['action'])) { // action is set
     if ($_GET['action'] == 'author') {
         author();
@@ -18,23 +18,23 @@ if (isset($_GET['action'])) { // action is set
             chapter($_GET['id']);
         }
     } elseif ($_GET['action'] == 'chapters') {
-        chapters($_GET ['page']);
-
+        chapters($_GET['page']);
     } elseif ($_GET['action'] == 'contact') {
         contact($_POST);
-        
     } elseif ($_GET['action'] == 'new_chapter') {
         newChapter($_POST);
-    
-    }elseif($_GET['action'] == 'comment'){
+    } elseif ($_GET['action'] == 'comment') {
         comment($_POST);
-
-    } elseif($_GET['action'] == 'login'){
+    } elseif ($_GET['action'] == 'login') {
         login($_POST);
-
-    }elseif($_GET['action'] == 'dashboard'){
+    } elseif ($_GET['action'] == 'dashboard') {
         dashboard();
-        
+    }elseif($_GET['action'] == 'logout'){
+        logout();
+    } elseif ($_GET['action'] == 'deleteChapter') {
+        deleteChapter($_POST);
+    } elseif ($_GET['action'] == 'deleteComment') {
+        deleteComment($_POST);
     } else { // unknown action
         echo 'Erreur : action inconnue : ' . $_GET['action'];
         die();
@@ -48,5 +48,3 @@ if (isset($_GET['pageno'])) {
 } else {
     $pageno = 1;
 }
-
-

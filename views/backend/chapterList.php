@@ -1,39 +1,65 @@
-<?php foreach ($chapters as $chapter) { ?>
-    <div class="chapterlist">
-        <div class="recentpost_display">
-            <img src="<?php echo $chapter['image'] ?>">
+<?php $title = "DashboardChapters"; ?>
 
-            <div class="chapter_contents">
-                <h3>
-                    <a href="/index.php?action=chapter&id=<?php echo $chapter['id'] ?>">
-                        <?php echo  $chapter['title'] ?>
-                    </a>
-                </h3>
+<?php ob_start(); ?>
 
-                <i>Chapter <?php echo $chapter['number'] ?></i><br>
+    <section id="dashboard">
+        <section id="dashboardTable">
+            <section id="chapterList">
 
-
-                <div class="body_text">
-                    <?php echo substr($chapter['body'], 0, 200) ?>...
+                <div class="dashboardtitles">
+                    <h1> CHAPTERS</h1>
+                    <p class="dashboardnewChapter"><a href="index.php?action=new_chapter"><i class="fas fa-plus"></i> New Chapter</a></p>
                 </div>
-                <br>
 
-                <a href="/index.php?action=chapter&id=<?php echo $chapter['id'] ?>">
+                <div class="recentpost_display">
 
-                    <a>Published <?php echo $chapter['published_date'] ?></a><br>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Chapter Title</th>
+                                <th>Chapter Number</th>
+                                <th>Published Date</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
 
-                    <a href="/index.php?action=chapter&id=<?php echo $chapter['id'] ?>">
+                            <?php foreach ($chapters as $chapter) { ?>
+                                <tr>
+                                    <div class="chapter_contents">
+                                        <td><i>Chapter <?php echo $chapter['number'] ?></i><br></td>
+                                        <td>
+                                            <h3>
+                                                <a href="/index.php?action=chapter&id=<?php echo $chapter['id'] ?>">
+                                                    <?php echo  $chapter['title'] ?></a>
+                                            </h3>
+                                        </td>
+                                        <td><a>Published <?php echo $chapter['published_date'] ?></a></td>
+                                        <td>
 
-                        <div class="action_buttons">
-                            <p><input type='submit' name='submit' value='Submit'></p>
-                            <button type="submit" id="edit-button">Publish</button>
-                            <button type="submit" id="edit-button">Draft</button>
-                            <button type="submit" id="edit-button">Delete</button>
+                                            <a href="#" class="edit" title="Edit" data-toggle="tooltip"><i class="fas fa-edit"></i></a>
 
-                        </div>
-            </div>
-        </div>
+                                            <form action="index.php?action=deleteChapter" method="post">
+
+                                                <input type="hidden" value="<?php echo $chapter['id'] ?>" name="id" />
+                                                <input type="submit"  value="Delete" />
+                                                <!-- <a href="#" class="delete" title="Delete" data-toggle="tooltip"><i class="fas fa-trash"></i></a> -->
+                                            </form>
+                                        </td>
+
+                                        <!-- <td><button class="read_more"> Delete</button> </a></td>
+                                    <td><button class="read_more">Draft</button> </a></td> -->
 
 
-    </div>
-<?php } ?>
+                                </tr>
+
+                            <?php } ?>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </section>
+    </section>
+
+<?php $content = ob_get_clean(); ?>
+<?php require 'views/backend/template.php'; ?>

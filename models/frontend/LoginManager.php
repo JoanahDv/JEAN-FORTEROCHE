@@ -16,6 +16,8 @@ class LoginManagerFrontend
         $req->closeCursor();
         return $result;
     }
+
+    
     
 }
 ?>

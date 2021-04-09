@@ -1,16 +1,16 @@
- <?php
-  require('models/connect.php');
+<?php
+ require('models/connect.php');
 
   class ChapterManagerBackend
   {
-    function createChapter($title, $body, $number)
+    function createChapter($title, $body, $number, $draft)
     {
       global $db; // defined in models/connect.php
       $query = $db->prepare('
-            INSERT INTO chapter(title, body, published_date, number)
-            VALUES(?, ?, NOW(), ?)
+            INSERT INTO chapter(title, body, published_date, number, draft)
+            VALUES(?, ?, NOW(), ?, ?)
           ');
-      $result = $query->execute(array($title, $body, $number));
+      $result = $query->execute(array($title, $body, $number, (bool) $draft));
       return $result;
     }
 
@@ -39,17 +39,33 @@
 
      }
       
-    function deleteChapter($id)
+
+     public function deleteChapter($id)
     {
-      // use global $conn object in function
-      global $db;
-      $sql = "DELETE FROM chapters WHERE id= $id";
-      if (mysqli_query($db, $sql)) {
-        echo "Record deleted successfully";
-      } else {
-        echo "Error deleting record: " . mysqli_error($db);
-      }
+        global $db;
+        $req = $db->prepare('
+            DELETE 
+            FROM chapter
+            WHERE id = ?
+        '); // build prepared statement
+        $req->execute(array($id)); // bind parameters and execute query ($id replaces the question mark "?")
+        $result = $req->fetch(); // fetch result
+        $req->closeCursor();
+        return $result;
     }
+
+
+    // function deleteChapter($id)
+    // {
+    //   // use global $conn object in function
+    //   global $db;
+    //   $sql = "DELETE FROM chapters WHERE id= $id";
+    //   if (mysqli_query($db, $sql)) {
+    //     echo "Record deleted successfully";
+    //   } else {
+    //     echo "Error deleting record: " . mysqli_error($db);
+    //   }
+    // }
 
     function getLatestChapters()
     {
@@ -61,10 +77,17 @@
       return $chapters;
     }
     
-    // function updateChapter()
-     
+    function editChapter ($id)
+    
+    {
+      global $db;
+      $$sql = "SELECT FROM chapters WHERE id= $id";
+      $result = mysqli_query($db, $sql);
+      $chapters = mysqli_fetch_all($result, MYSQLI_ASSOC);
+      return $chapters;
+    }
 
-
+    
     //FOR COMMENT
 
     function addComment($chapter_id, $comment, $author)
