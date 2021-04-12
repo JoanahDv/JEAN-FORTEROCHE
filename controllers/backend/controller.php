@@ -63,6 +63,7 @@ function dashboard()
     $chapters = $chapterManager->getChapters();
     $commentManager = new commentManagerBackend();
     $comments = $commentManager->getComments();
+   
     // $numberOfPages = $chapterManager->getChapterManagerPagination();
     require('views/backend/dashboard.php');
 }
@@ -83,4 +84,21 @@ function deleteComment($post_parameters)
     $commentManager = new commentManagerBackend();
     $id = $post_parameters['id'];
     $commentManager->deleteComment($id);
+    header('Location:/index.php?action=dashboard#commentList');
+    exit();
+
 }
+//redirect 
+
+function validateComment($post_parameters)
+{
+    redirectIfNotLoggedin();
+    $flagCommentManager = new commentManagerBackend();
+    $id = $post_parameters['id'];
+    $flagCommentManager->validateComment($id);
+    header('Location:/index.php?action=dashboard#commentList');
+    exit();
+ }
+ 
+
+

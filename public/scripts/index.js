@@ -31,6 +31,18 @@ $(document).ready(function() {
             }
         });
     });
+    $(".flagform").submit(function(event) {
+        event.preventDefault(); // prevent regular form submit
+        // submit form using AJAX
+        var form = $(this);
+        $.post({
+            url: form.attr('action'),
+            data: form.serialize(), // serializes the form's elements.
+            success: function(data) {
+                form.prev().show(); // success message is the element right before the form 
+            }
+        });
+    });
 
 
 });

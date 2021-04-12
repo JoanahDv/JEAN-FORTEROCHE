@@ -22,19 +22,12 @@ class commentManagerFrontend
           //result is commented out
     }
 
-    public function flagComment($comment) {
-      // function creatcomment($comment, $comment_date,$comment_time, $author)
-      
-        global $db; // defined in models/connect.php
-        $sql = $db->prepare('
-          INSERT INTO comment (comment, author, email, comment_date,chapter_id) 
-          VALUES(?, ?, ?, NOW(), ?)
-        ');
-        $affectedLines = $sql->execute(array($comment));
-        //result is commented out
-  }
-
-
+    public function flagComment($id) {
+      global $db; // defined in models/connect.php
+      $sql = $db->prepare('UPDATE comment SET flag = 1 WHERE id = ?');
+      $affectedLines = $sql->execute(array($id));
+    }
+ 
 
     // public function getCommentPagination()
     // {

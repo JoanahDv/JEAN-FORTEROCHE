@@ -54,19 +54,6 @@
         return $result;
     }
 
-
-    // function deleteChapter($id)
-    // {
-    //   // use global $conn object in function
-    //   global $db;
-    //   $sql = "DELETE FROM chapters WHERE id= $id";
-    //   if (mysqli_query($db, $sql)) {
-    //     echo "Record deleted successfully";
-    //   } else {
-    //     echo "Error deleting record: " . mysqli_error($db);
-    //   }
-    // }
-
     function getLatestChapters()
     {
       global $db;
@@ -87,7 +74,6 @@
       return $chapters;
     }
 
-    
     //FOR COMMENT
 
     function addComment($chapter_id, $comment, $author)

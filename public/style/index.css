@@ -727,8 +727,8 @@ footer a {
         width: 20%;
     }
     #dashboardHome {
-        padding: 123px;
-        margin-top: 93px;
+        padding: 24px;
+        margin-top: 87px;
     }
     #dashboardHome h1 {
         color: black;
@@ -745,4 +745,16 @@ footer a {
         padding: 73px;
         background-color: #80808024
     } */
+    #warning {
+        display: flex;
+        color: red;
+    }
+    .success-flag-comment {
+        font-size: 30px;
+        text-align: center;
+        background-color: #294040;
+        color: white;
+        padding: 40px;
+        display: none;
+    }
 }

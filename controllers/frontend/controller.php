@@ -70,8 +70,35 @@ function comment($post_parameters)
             $post_parameters['comment_author'],
             $post_parameters['email'],
             $post_parameters['chapterid']
+            // $post_parameters['flag']
         );
     }
     require('views/frontend/comment.php');
 }
+// function comments($page){
+// $commentManager= new commentManagerFrontend();
+// $comments= $commentManager->getComments($page);
+// $numberOfPages = $commentManager->getcommentPagination();
+
+// }
+
+
+function flagComment($post_parameters)
+{
+    $flagCommentManager = new commentManagerFrontend();
+    $id = $post_parameters['id'];
+    $flagCommentManager->flagComment($id);
+    echo 'This comment has been flagged';
+    die();
+}
+
+ 
+
+
+// function flagComment()
+// {
+//     $flagManager = new flagCommentFrontend();
+
+ 
+// }
 ?>

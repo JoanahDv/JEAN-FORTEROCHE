@@ -29,30 +29,19 @@
             return $comments;
     
          }
-        
+    
         public function deleteComment($id)
         {
-            // use global $conn object in function
-            global $db;
-            $sql = "DELETE FROM comment WHERE id= $id";
-            if (mysqli_query($db, $sql)) {
-                echo "Record deleted successfully";
-            } else {
-                echo "Error deleting comment: " . mysqli_error($db);
-            }
-        }
+            global $db; 
+            $sql = $db->prepare('DELETE FROM comment WHERE id = ?');
+            $affectedLines = $sql->execute(array($id));
+        }   
 
-        public function validateComment($id)
-        {
-            // use global $conn object in function
-            global $db;
-            $sql = "VALIDATE FROM comments WHERE id= $id";
-            if (mysqli_query($db, $sql)) {
-                echo "Record deleted successfully";
-            } else {
-                echo "Error deleting record: " . mysqli_error($db);
-            }
-        }
+        public function validateComment($id) {
+            global $db; 
+            $sql = $db->prepare('UPDATE comment SET flag = 0, to_validate = 0 WHERE id = ?');
+            $affectedLines = $sql->execute(array($id));
+          }
        
     }
 ?>

@@ -12,7 +12,7 @@
                         <th>Author</th>
                         <th>comments</th>
 
-                        
+
                         <th>Published Date</th>
                         <th>Action</th>
                     </tr>
@@ -24,7 +24,14 @@
 
                         <tr>
                             <div class="comment_content">
+
                                 <td>
+                                    <?php if ($comment['flag'] == 1) : ?>
+                                        <i id="warning" class="fas fa-exclamation-triangle"><br>
+                                            <p>this comment has been flagged</p>
+                                        </i>
+                                    <?php endif; ?>
+
                                     <h3>
                                         <a href="/index.php?action=chapter&id=<?php echo $chapter['id'] ?>">
                                             <?php echo  $chapter['title'] ?></a>
@@ -39,15 +46,27 @@
                                 <td><i> publish on <?php echo $comment['comment_date'] ?></i></td>
 
                                 <td>
-
-                                    <!-- <a href="#" class="edit" title="Edit" data-toggle="tooltip"><i class="fas fa-edit"></i></a> -->
+                                    <!-- FORM TO DELETE COMMENT -->
 
                                     <form action="index.php?action=deleteComment" method="post">
-
                                         <input type="hidden" value="<?php echo $comment['id'] ?>" name="id" />
-                                        <input type="submit" value="Validate"/>
+                                        <input type="submit" value="Delete" />
                                     </form>
-                                   <a href="#" class="delete" title="Delete" data-toggle="tooltip"><i class="fas fa-trash"></i></a>
+                                    
+                                    <form action="index.php?action=validateComment" method="post">
+                                    <?php if ($comment['flag'] == 1) : ?>
+                                        <input type="hidden" value="<?php echo $comment['id'] ?>" name="id" />
+                                        <input type='submit' name='validate' value='Validate'>
+                                    <?php endif; ?>
+                                </form>
+
+
+                                    <!-- FORM TO VALIDATE COMMENT IF ITS FLAGGED  -->
+                                    <!-- <form action="index.php?action=ValidateComment" method="post">
+                                        <input type="submit" value="Validate" />
+                                        <input type="hidden" value="<?php echo $comment['id'] ?>" name="id" />
+                                    </form> -->
+
 
                                 </td>
                             </div>

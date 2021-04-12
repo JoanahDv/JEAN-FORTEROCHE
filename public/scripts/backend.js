@@ -34,9 +34,9 @@ $(document).ready(function() {
         });
     });
 
-    $("#chapterList").hide();
-    $("#commentList").hide();
-    $("#newChapter").hide();
+    $("#chapterList").show();
+    $("#commentList").show();
+    $("#newChapter").show();
     $(".dashboardChapters a").click(function(event) {
         $("#chapterList").show();
         $("#commentList").hide();

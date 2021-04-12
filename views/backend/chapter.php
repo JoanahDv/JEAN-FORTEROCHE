@@ -1,8 +1,10 @@
 <?php ob_start(); ?>
+
 <section class="sectionBackend">
     <?php if (isset($successMessage)) { ?>
         <span style="background-color:green"><?php echo $successMessage; ?></span>
     <?php } ?>
+    
     <h1> NEW CHAPTER</h1>
 
     <form action="index.php?action=new_chapter" method="POST">
