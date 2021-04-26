@@ -9,11 +9,16 @@ class LoginManagerFrontend
         $req = $db->prepare('
             SELECT *
             FROM user
-            WHERE username = ? AND password = ?
+            WHERE username = ?
+            LIMIT 1
         ');
-        $req->execute(array($username, $password));
+        $req->execute(array($username));
         $result = $req->fetch(); // fetch result
         $req->closeCursor();
+        $is_password_right = password_verify($password, $result["password"]);
+        if (!$is_password_right) {
+            return false;
+        }
         return $result;
     }
 

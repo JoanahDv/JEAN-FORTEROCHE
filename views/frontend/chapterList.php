@@ -10,7 +10,7 @@
                         <?php echo  $chapter['title'] ?>
                     </a>
                 </h3>
-
+                
                 <i>Chapter <?php echo $chapter['number'] ?></i><br>    
 
 

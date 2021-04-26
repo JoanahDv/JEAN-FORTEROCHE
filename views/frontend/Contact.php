@@ -17,7 +17,7 @@
 
     <div class="container_contact">
         <h3>Contact Us</h3>
-        <p id="success">Thank you! <br>Your comment has been sent.</p>
+        <p id="success">Thank you! <br>Your Message has been sent.</p>
 
         <form action="/index.php?action=contact" method="POST" id = "contactForm">
 

@@ -13,7 +13,7 @@
         
             // fetch all posts as an associative array called $posts
             $comments= mysqli_fetch_all($result, MYSQLI_ASSOC);
-        
+         
             return $comments;
         }
 

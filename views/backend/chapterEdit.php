@@ -4,7 +4,7 @@
     <div>
         <label>Title</label><br />
         <input type='text' name='title'></p><br>
-
+ 
         <p><label>Body</label><br />
             <textarea name='body' cols='60' rows='10' id='body'></textarea></p>
 

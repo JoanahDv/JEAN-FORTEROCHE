@@ -33,27 +33,47 @@ $(document).ready(function() {
             }
         });
     });
-
-    $("#chapterList").show();
-    $("#commentList").show();
-    $("#newChapter").show();
+    $(".dashboardHome a").click(function(event) {
+        $("#dashboardHome").show();
+        $("#chapterList").show();
+        $("#commentList").show();
+        $("#newChapter").show();
+        $("#contactList").show();
+        $(".newchapterForm").hide();
+    });
     $(".dashboardChapters a").click(function(event) {
         $("#chapterList").show();
         $("#commentList").hide();
         $("#newChapter").hide();
         $("#dashboardHome").hide();
+        $("#contactList").hide();
+
     });
     $(".dashboardComment a").click(function(event) {
         $("#chapterList").hide();
         $("#commentList").show();
         $("#newChapter").hide();
         $("#dashboardHome").hide();
+        $("#contactList").hide();
+        $(".newchapterForm").hide();
+
+
     });
     $(".dashboardnewChapter a").click(function(event) {
         $("#chapterList").hide();
         $("#commentList").hide();
         $("#newChapter").show();
         $("#dashboardHome").hide();
+        $("#contactList").hide();
+
+    });
+    $(".dashboardMessages a").click(function(event) {
+        $("#contactList").show();
+        $("#chapterList").hide();
+        $("#commentList").hide();
+        $("#newChapter").hide();
+        $("#dashboardHome").hide();
+        $(".newchapterForm").hide();
     });
 
 

@@ -3,7 +3,29 @@
 class commentManagerFrontend
 {
     public function getCommentsForChapter($chapter_id) {
+      // $commentsPerChapter = 6;
+      // $offset = $commentsPerChapter * $pageNumber - $commentsPerChapter; // 
+  
         global $db;
+    //     $req = $db->prepare('
+    //     SELECT *
+    //     FROM comment 
+    //     ORDER BY published_date ASC
+    //     LIMIT ' . $offset . ', ' . $commentsPerChapter);
+    // $req->execute();
+    // // this is the right way to do it but it won't work
+    //     // $req = $db->prepare('
+    //     //     SELECT *
+    //     //     FROM chapter 
+    //     //     ORDER BY published_date ASC 
+    //     //     LIMIT ?, ?
+    //     // ');
+    //     // $req->execute(array($offset, $chaptersPerPage));
+    //     $result = $req->fetchall();
+    //     $req->closeCursor();
+    //     return $result;
+
+
         $sql = $db->prepare('SELECT * FROM comment WHERE chapter_id = ?');
         $sql->execute(array($chapter_id));
         $comments = $sql->fetchall();
@@ -38,7 +60,7 @@ class commentManagerFrontend
     //         FROM comments
     //     ');
     //     $numberOfComments = $req->fetch()[0]; // fetch result
-    //     $numberOfComments = ceil($numberOfChapters/6);
+    //     $numberOfComments = ceil($numberOfComments/6);
     //     return $numberOfPages;
     // }
 }

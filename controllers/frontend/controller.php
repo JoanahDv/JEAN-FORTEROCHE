@@ -79,7 +79,7 @@ function comment($post_parameters)
 // $commentManager= new commentManagerFrontend();
 // $comments= $commentManager->getComments($page);
 // $numberOfPages = $commentManager->getcommentPagination();
-
+// require('views/frontend/chapters.php');
 // }
 
 

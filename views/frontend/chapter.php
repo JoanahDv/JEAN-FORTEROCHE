@@ -10,8 +10,7 @@
     </p>
 </div>
 <div class="content">
-    <?php echo $chapter['number'] ?><br>
-    <h1><?php echo $chapter['title'] ?></h1><br>
+     <h1><?php echo $chapter['title'] ?></h1><br>
     <?php echo $chapter['body'] ?><br>
     <?php echo $chapter['published_date'] ?><br>
     <img src="<?php echo $chapter['image'] ?>" /><br>
@@ -24,8 +23,6 @@
 
 <div class="commentSection">
     <?php require 'views/frontend/comment.php'; ?>
-</div>
-
-
+</div>  
 <?php $content = ob_get_clean(); ?>
 <?php require 'views/frontend/template.php'; ?>

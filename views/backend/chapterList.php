@@ -42,7 +42,9 @@
                                             <form action="index.php?action=deleteChapter" method="post">
 
                                                 <input type="hidden" value="<?php echo $chapter['id'] ?>" name="id" />
-                                                <input type="submit"  value="Delete" />
+                                                
+                                                
+                                                <input type="submit" value="Delete"  />
                                                 <!-- <a href="#" class="delete" title="Delete" data-toggle="tooltip"><i class="fas fa-trash"></i></a> -->
                                             </form>
                                         </td>

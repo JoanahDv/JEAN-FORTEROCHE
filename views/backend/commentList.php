@@ -1,3 +1,5 @@
+<?php $title = "DashboardComments"; ?>
+
 <?php ob_start(); ?>
 
 <section id="dashboard">
@@ -11,8 +13,6 @@
                         <th>Chapter Title</th>
                         <th>Author</th>
                         <th>comments</th>
-
-
                         <th>Published Date</th>
                         <th>Action</th>
                     </tr>
@@ -52,13 +52,13 @@
                                         <input type="hidden" value="<?php echo $comment['id'] ?>" name="id" />
                                         <input type="submit" value="Delete" />
                                     </form>
-                                    
+
                                     <form action="index.php?action=validateComment" method="post">
-                                    <?php if ($comment['flag'] == 1) : ?>
-                                        <input type="hidden" value="<?php echo $comment['id'] ?>" name="id" />
-                                        <input type='submit' name='validate' value='Validate'>
-                                    <?php endif; ?>
-                                </form>
+                                        <?php if ($comment['flag'] == 1) : ?>
+                                            <input type="hidden" value="<?php echo $comment['id'] ?>" name="id" />
+                                            <input type='submit' name='validate' value='Validate'>
+                                        <?php endif; ?>
+                                    </form>
 
 
                                     <!-- FORM TO VALIDATE COMMENT IF ITS FLAGGED  -->

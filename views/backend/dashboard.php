@@ -13,6 +13,9 @@ WELCOME TO YOUR DASHBOARD
 </section>
 <?php require 'views/backend/chapterList.php'; ?>
 <?php require 'views/backend/commentList.php'; ?> 
+<?php require 'views/backend/contactList.php'; ?> 
+
+
 
 
 <?php $content = ob_get_clean(); ?>

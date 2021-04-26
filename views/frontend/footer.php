@@ -5,9 +5,6 @@
     <h4 class="footer-contact">
         <a href="index.php?action=contact">Contact us</a>
     </h4>
-    <p class="rights">
-        © Jean Forteroche 2021 | All rights reserved | A siple ticket to ALASKA | Privacy Policy
-    </p>
     <p>
         <a href="index.php?action=login">ADMIN LOGIN</a>
     </p>
@@ -25,6 +22,11 @@
                 <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
             </li>
         </ul>
-
     </div>
+    
+    
+    <p class="rights">
+        © Jean Forteroche 2021 | All rights reserved | A siple ticket to ALASKA | Privacy Policy
+    </p>
+   
 </footer>

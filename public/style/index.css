@@ -653,10 +653,12 @@ footer a {
     #success {
         font-size: 30px;
         text-align: center;
-        background-color: #294040;
-        color: white;
-        padding: 40px;
+        background-color: #b2caca;
+        color: #294040;
+        padding: 5px;
         display: none;
+        line-height: 2;
+        text-align: center;
     }
     #dashboard header {
         display: none;
@@ -681,6 +683,8 @@ footer a {
     }
     .dashboardtitles {
         padding: 35px;
+        display: flex;
+        justify-content: space-between;
     }
     /* .dashboardTitles {
         display: flex;
@@ -692,7 +696,7 @@ footer a {
         margin-top: 74px;
     }
     .sectionBackend {
-        margin-top: 100px;
+        margin-top: 146px;
         padding-left: 15px;
         padding-right: 15px;
     }
@@ -750,11 +754,12 @@ footer a {
         color: red;
     }
     .success-flag-comment {
-        font-size: 30px;
-        text-align: center;
-        background-color: #294040;
-        color: white;
-        padding: 40px;
+        color: #fefefe;
+        padding: 7px;
         display: none;
+        /* width: 30%; */
+        background-color: #801313c7;
+        border-radius: 24px;
+        text-align: center;
     }
 }

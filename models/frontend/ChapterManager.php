@@ -10,6 +10,7 @@ class ChapterManagerFrontend
         $req = $db->prepare('
             SELECT *
             FROM chapter 
+            WHERE draft = 0
             ORDER BY published_date ASC
             LIMIT ' . $offset . ', ' . $chaptersPerPage);
         $req->execute();
@@ -45,6 +46,7 @@ class ChapterManagerFrontend
         $req = $db->prepare('
             SELECT *
             FROM chapter
+            WHERE draft = 0
             WHERE id = ?
         '); // build prepared statement
         $req->execute(array($id)); // bind parameters and execute query ($id replaces the question mark "?")
@@ -59,6 +61,7 @@ class ChapterManagerFrontend
         $req = $db->query('
             SELECT *
             FROM chapter 
+            WHERE draft = 0
             ORDER BY published_date DESC 
             LIMIT 1
         ');
