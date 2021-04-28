@@ -55,13 +55,13 @@ function login($post_parameters)
     }
     require('views/frontend/login.php');
 }
-    function logout()
-    {
-        redirectIfNotLoggedin();    
-        session_destroy();
-        header('Location:/index.php?action=login'); // redirect to frontend
-        exit();
-    }
+function logout()
+{
+    redirectIfNotLoggedin();
+    session_destroy();
+    header('Location:/index.php?action=login'); // redirect to frontend
+    exit();
+}
 function dashboard()
 {
     redirectIfNotLoggedin(); // call function to redirect to login page in not logged in
@@ -102,7 +102,6 @@ function deleteComment($post_parameters)
     $commentManager->deleteComment($id);
     header('Location:/index.php?action=dashboard#commentList');
     exit();
-
 }
 //redirect 
 
@@ -114,21 +113,32 @@ function validateComment($post_parameters)
     $flagCommentManager->validateComment($id);
     header('Location:/index.php?action=dashboard#commentList');
     exit();
- }
+}
 
- function uploadFile($post_parameters){
+function uploadFile($post_parameters)
+{
     redirectIfNotLoggedin();
-    if(isset($_FILES['file'])){
+    if (isset($_FILES['file'])) {
         $tmpName = $_FILES['file']['tmp_name'];
         $name = $_FILES['file']['name'];
         $size = $_FILES['file']['size'];
         $error = $_FILES['file']['error'];
     }
-    move_uploaded_file($tmpName, './images/'.$name);
-    $tabExtension = explode('.', $name);
-$extension = strtolower(end($tabExtension));
 
- }
+    move_uploaded_file($tmpName, './images/' . $name);
+    $tabExtension = explode('.', $name);
+    $extension = strtolower(end($tabExtension));
+    //Tableau des extensions que l'on accepte
+    $extensions = ['jpg', 'png', 'jpeg', 'gif'];
+    //Taille max que l'on accepte
+    $maxSize = 400000;
+    if(in_array($extension, $extensions) && $size <= $maxSize && $error == 0){
+        move_uploaded_file($tmpName, './images/'.$name);
+    }
+    else{
+        echo "Une erreur est survenue";
+    }
+}   
 
 //  function deleteContact($post_parameters)
 // {
@@ -139,10 +149,3 @@ $extension = strtolower(end($tabExtension));
 //     header('Location:/index.php?action=dashboard#commentList');
 //     exit();
 //  }
-
-
-
-
- 
-
-
