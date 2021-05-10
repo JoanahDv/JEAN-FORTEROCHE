@@ -33,8 +33,8 @@
                                     <?php endif; ?>
 
                                     <h3>
-                                        <a href="/index.php?action=chapter&id=<?php echo $chapter['id'] ?>">
-                                            <?php echo  $chapter['title'] ?></a>
+                                        <a href="/index.php?action=chapter&id=<?php echo $comment['chapter_id'] ?>">
+                                            <?php echo  $comment['chapter']['title'] ?></a>
                                     </h3>
                                 </td>
                                 <td>
@@ -47,27 +47,19 @@
 
                                 <td>
                                     <!-- FORM TO DELETE COMMENT -->
-
-                                    <form action="index.php?action=deleteComment" method="post">
-                                        <input type="hidden" value="<?php echo $comment['id'] ?>" name="id" />
-                                        <input type="submit" value="Delete" />
-                                    </form>
-
-                                    <form action="index.php?action=validateComment" method="post">
-                                        <?php if ($comment['flag'] == 1) : ?>
+                                    <div class="dashboardAction">
+                                        <form action="index.php?action=deleteComment" method="post">
                                             <input type="hidden" value="<?php echo $comment['id'] ?>" name="id" />
-                                            <input type='submit' name='validate' value='Validate'>
-                                        <?php endif; ?>
-                                    </form>
+                                            <input type="submit" value="Delete" />
+                                        </form>
 
-
-                                    <!-- FORM TO VALIDATE COMMENT IF ITS FLAGGED  -->
-                                    <!-- <form action="index.php?action=ValidateComment" method="post">
-                                        <input type="submit" value="Validate" />
-                                        <input type="hidden" value="<?php echo $comment['id'] ?>" name="id" />
-                                    </form> -->
-
-
+                                        <form action="index.php?action=validateComment" method="post">
+                                            <?php if ($comment['flag'] == 1) : ?>
+                                                <input type="hidden" value="<?php echo $comment['id'] ?>" name="id" />
+                                                <input type='submit' name='validate' value='Validate'>
+                                            <?php endif; ?>
+                                        </form>
+                                    </div>
                                 </td>
                             </div>
                         </tr>

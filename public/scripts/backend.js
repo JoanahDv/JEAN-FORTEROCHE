@@ -17,7 +17,13 @@ $(document).ready(function() {
             'bold italic backcolor | alignleft aligncenter ' +
             'alignright alignjustify | bullist numlist outdent indent | ' +
             'removeformat | help',
-        content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:14px }'
+        content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:14px }',
+        // when tiny is initiated we set up the funtion to show the body texts
+        setup: function(editor) {
+            editor.on('init', function(e) {
+                editor.setContent($("#body-hidden").val());
+            });
+        }
     });
 
     $("#contactForm").submit(function(event) {
@@ -39,43 +45,60 @@ $(document).ready(function() {
         $("#commentList").show();
         $("#newChapter").show();
         $("#contactList").show();
-        $(".newchapterForm").hide();
+        $(".newchapterForm").show();
     });
-    $(".dashboardChapters a").click(function(event) {
-        $("#chapterList").show();
-        $("#commentList").hide();
-        $("#newChapter").hide();
-        $("#dashboardHome").hide();
-        $("#contactList").hide();
+    // $(".dashboardChapters a").click(function(event) {
+    //     $("#chapterList").show();
+    //     $("#commentList").hide();
+    //     $("#newChapter").hide();
+    //     $("#dashboardHome").hide();
+    //     $("#contactList").hide();
 
+    // });
+    // $(".dashboardComment a").click(function(event) {
+    //     $("#chapterList").hide();
+    //     $("#commentList").show();
+    //     $("#newChapter").hide();
+    //     $("#dashboardHome").hide();
+    //     $("#contactList").hide();
+    //     $(".newchapterForm").hide();
+
+
+    // });
+    // $(".dashboardnewChapter a").click(function(event) {
+    //     $("#chapterList").hide();
+    //     $("#commentList").hide();
+    //     $("#newChapter").show();
+    //     $("#dashboardHome").hide();
+    //     $("#contactList").hide();
+
+    // });
+    // $(".dashboardMessages a").click(function(event) {
+    //     $("#contactList").show();
+    //     $("#chapterList").hide();
+    //     $("#commentList").hide();
+    //     $("#newChapter").hide();
+    //     $("#dashboardHome").hide();
+    //     $(".newchapterForm").hide();
+    // });
+
+    $("#form-image-upload").on("submit", function(e) {
+        e.preventDefault();
+        var $form = $(this);
+        var form = new FormData($form[0]);
+        $.ajax({
+            url: $form.attr("action"),
+            method: $form.attr("method"),
+            data: form,
+            processData: false,
+            contentType: false,
+            success: function(data, status, xhr) {
+                $("#image").val(data); // set image name in form
+                $("#image-preview").attr("src", "/public/images/" + data);
+            },
+            error: function(error) {
+                alert(error.responseText);
+            }
+        });
     });
-    $(".dashboardComment a").click(function(event) {
-        $("#chapterList").hide();
-        $("#commentList").show();
-        $("#newChapter").hide();
-        $("#dashboardHome").hide();
-        $("#contactList").hide();
-        $(".newchapterForm").hide();
-
-
-    });
-    $(".dashboardnewChapter a").click(function(event) {
-        $("#chapterList").hide();
-        $("#commentList").hide();
-        $("#newChapter").show();
-        $("#dashboardHome").hide();
-        $("#contactList").hide();
-
-    });
-    $(".dashboardMessages a").click(function(event) {
-        $("#contactList").show();
-        $("#chapterList").hide();
-        $("#commentList").hide();
-        $("#newChapter").hide();
-        $("#dashboardHome").hide();
-        $(".newchapterForm").hide();
-    });
-
-
-
 });

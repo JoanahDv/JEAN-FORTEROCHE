@@ -49,19 +49,41 @@ class commentManagerFrontend
       $sql = $db->prepare('UPDATE comment SET flag = 1 WHERE id = ?');
       $affectedLines = $sql->execute(array($id));
     }
- 
-
-    // public function getCommentPagination()
-    // {
-    //     global $db;
-    //     // count all chapters
-    //     $req = $db->query('
-    //         SELECT COUNT(*)
-    //         FROM comments
-    //     ');
-    //     $numberOfComments = $req->fetch()[0]; // fetch result
-    //     $numberOfComments = ceil($numberOfComments/6);
-    //     return $numberOfPages;
-    // }
+    public function getComments($pageNumber) {
+        {
+        $commentsPerPage = 6;
+        $offset = $commentsPerPage * $pageNumber - $commentsPerPage; //
+        global $db;
+        $req = $db->prepare('
+            SELECT *
+            FROM comment 
+            ORDER BY published_date ASC
+            LIMIT ' . $offset . ', ' . $commentsPerPage);
+        $req->execute();
+        // this is the right way to do it but it won't work
+        // $req = $db->prepare('
+        //     SELECT *
+        //     FROM chapter
+        //     ORDER BY published_date ASC
+        //     LIMIT ?, ?
+        // ');
+        // $req->execute(array($offset, $chaptersPerPage));
+        $result = $req->fetchall();
+        $req->closeCursor();
+        return $result;
+      }
+    } 
+    public function getCommentsPagination()
+    {
+        global $db;
+        // count all chapters
+        $req = $db->query('
+            SELECT COUNT(*)
+            FROM comment
+        ');
+        $numberOfComments = $req->fetch()[0]; // fetch result
+        $numberOfPages = ceil ($numberOfComments/6);
+        return $numberOfPages;
+    } 
 }
 ?>

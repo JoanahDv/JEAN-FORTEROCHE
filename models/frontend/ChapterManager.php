@@ -34,6 +34,7 @@ class ChapterManagerFrontend
         $req = $db->query('
             SELECT COUNT(*)
             FROM chapter
+            WHERE draft = 0
         ');
         $numberOfChapters = $req->fetch()[0]; // fetch result
         $numberOfPages = ceil ($numberOfChapters/6);
@@ -46,8 +47,8 @@ class ChapterManagerFrontend
         $req = $db->prepare('
             SELECT *
             FROM chapter
-            WHERE draft = 0
             WHERE id = ?
+            AND draft = 0
         '); // build prepared statement
         $req->execute(array($id)); // bind parameters and execute query ($id replaces the question mark "?")
         $result = $req->fetch(); // fetch result

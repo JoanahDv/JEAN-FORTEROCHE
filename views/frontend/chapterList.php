@@ -1,8 +1,7 @@
-
 <?php foreach ($chapters as $chapter) { ?>
     <div class="chapterlist">
         <div class="recentpost_display">
-             <img src="<?php echo $chapter['image'] ?>">
+             <img src="/public/images/<?php echo $chapter['image'] ?>">
 
             <div class="chapter_contents">
                 <h3>
@@ -10,7 +9,7 @@
                         <?php echo  $chapter['title'] ?>
                     </a>
                 </h3>
-                
+
                 <i>Chapter <?php echo $chapter['number'] ?></i><br>    
 
 

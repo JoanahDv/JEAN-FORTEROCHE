@@ -3,6 +3,7 @@
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
+
 require('configuration/config.php');
 require('controllers/frontend/controller.php');
 require('controllers/backend/controller.php');
@@ -36,11 +37,22 @@ if (isset($_GET['action'])) { // action is set
     } elseif ($_GET['action'] == 'dashboard') {
         dashboard();
 
+        //get all pages in backend
+    } elseif ($_GET['action'] == 'chapterList') {
+         chapterList();
+    } elseif ($_GET['action'] == 'commentList') {
+        commentList();
+    } elseif ($_GET['action'] == 'contactList') {
+        contactList();
+
+    } elseif ($_GET['action'] == 'login') {
+        login($_POST);
+
     } elseif ($_GET['action'] == 'logout') {
         logout();
     
     }elseif($_GET['action'] == 'editChapter') {
-        editChapter($_POST);
+        editChapter($_GET['id'], $_POST);
         
     } elseif ($_GET['action'] == 'deleteChapter') {
         deleteChapter($_POST);
@@ -55,6 +67,9 @@ if (isset($_GET['action'])) { // action is set
         //VALIDATE THE COMMENT BACK END 
     } elseif ($_GET['action'] == 'validateComment') {
         validateComment($_POST);
+
+    } elseif ($_GET['action'] == 'upload_image') {
+        uploadFile($_POST);
 
     } else { // unknown action
         echo 'Error : unknown action : ' . $_GET['action'];

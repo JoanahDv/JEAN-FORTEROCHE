@@ -12,8 +12,9 @@
 <div class="content">
      <h1><?php echo $chapter['title'] ?></h1><br>
     <?php echo $chapter['body'] ?><br>
+
     <?php echo $chapter['published_date'] ?><br>
-    <img src="<?php echo $chapter['image'] ?>" /><br>
+    <img src="/public/images/<?php echo $chapter['image'] ?>" /><br>
 </div>
 
 <section id="commentListContent">

@@ -20,9 +20,7 @@ class LoginManagerFrontend
             return false;
         }
         return $result;
-    }
-
-    
+    }  
     
 }
 ?>

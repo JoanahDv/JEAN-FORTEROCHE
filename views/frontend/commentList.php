@@ -14,6 +14,16 @@
             <input type="submit" value="flag" />
         </form>
     </div>
+    <div class="pagination">
+        <?php for ($pageNumber = 1; $pageNumber <= $numberOfPages; $pageNumber = $pageNumber + 1) { ?>
+            <li class="page-item">
+                <a class="page-link" href="index.php?action=chapters&page=<?php echo $pageNumber ?>">
+                    <?php echo $pageNumber ?>
+                </a>
+            </li>
+        <?php } ?>
+
+    </div>
 
     
 <?php } ?>
