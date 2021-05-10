@@ -15,7 +15,6 @@
          
             return $contact;
         }
-
         public function getContacts(){
             global $db;
             $req = $db->prepare('

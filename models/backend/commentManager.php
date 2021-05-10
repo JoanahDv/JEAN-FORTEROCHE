@@ -17,7 +17,6 @@ class CommentManagerBackend
         return $comments;
     }
 
-
     public function getComments()
     {
         global $db;

@@ -11,7 +11,7 @@
 
     <div class="newchapterForm">
         <div class="chapterTitles">
-            <label>ChapterTitle</label><br />
+            <label class="chapterT"><b>ChapterTitle</b></label><br />
             <input type='text' name='title' form="chapter-form" />
             <label for="file">Image</label>
             <input type="file" name="file" form="form-image-upload"><br>

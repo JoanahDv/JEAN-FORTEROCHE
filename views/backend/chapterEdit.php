@@ -12,7 +12,7 @@
     <!-- <div class="newchapterForm"> -->
     <div class="chapterTitle">
 
-        <label><b>Chapter Title</b></label><br />
+        <label class="chapterT"><b>ChapterTitle</b></label><br />
 
         <input class="titleText" type='text' name='title' form="chapter-form" value="<?php echo $chapter['title'] ?>" /><br>
         <label for="file"><b>Insert Image</b></label><br>
@@ -20,7 +20,7 @@
             <input type="file" name="file" form="form-image-upload">
             <input type="submit" value="Save" form="form-image-upload" />
             <input type="hidden" id="image" name="image" form="chapter-form" value="<?php echo $chapter['image'] ?>" />
-            <img src="/public/images/<?php echo $chapter['image'] ?>" id="image-preview"/>
+            <img src="/public/images/<?php echo $chapter['image'] ?>" id="image-preview" />
         </div>
     </div>
     <div class="newchapterForm">

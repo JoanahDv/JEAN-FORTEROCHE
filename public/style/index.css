@@ -14,10 +14,8 @@ html,
 
 body {
     font-family: 'Roboto', condensed;
-    /* width: 100%; */
     margin: 0px;
     line-height: 23px;
-    /* background-image: url("images/Alaskabg.jpg"); */
 }
 
 img {
@@ -42,6 +40,19 @@ h2 {
 
 .content h2 {
     padding: 15px;
+}
+
+.container_post h2,
+.chapters_content,
+#slogan,
+.commentSection h2,
+.chapters_content_head,
+.container_contact h3,
+.chapters_content_head,
+.chapterlist a,
+.read_more,
+#dashboard h1 {
+    text-align: center;
 }
 
 
@@ -81,11 +92,6 @@ header a,
 }
 
 
-/* .nav-link {
-
-} */
-
-
 /* ---------------------------------------- */
 
 
@@ -95,28 +101,16 @@ header a,
 /*---------------------------------------- */
 
 .chapters_content {
-    text-align: center;
     background-color: teal;
     margin-bottom: 37px;
     margin-top: 35px;
     padding-top: 62px
 }
 
-
-/* padding-top: 30px;
-     height: 100%; 
-     background-size: cover; 
-     text-align: center;
-    background-color: teal; 
-     margin-bottom: 37px; 
-    margin-top: 73px;
-    padding-top: 14px; */
-
 .container_post h2 {
     background-color: #294040;
     color: white;
     padding: 15px;
-    text-align: center;
 }
 
 .container_post {
@@ -125,7 +119,6 @@ header a,
 
 .container_books {
     padding-top: 24px;
-    /* color: #ffe8e8;*/
     background-color: #80808029;
 }
 
@@ -136,9 +129,6 @@ header a,
     display: none;
     top: 0;
     right: 0;
-    /* width: 150px; */
-    /* height: 200px; */
-    /* background-color: white; */
     list-style-type: none;
 }
 
@@ -174,21 +164,8 @@ header ul {
     text-decoration: none;
     color: white;
     font-size: 1.2em;
-    /* font-weight: 700; */
     text-transform: uppercase;
-    /* padding: 10px 15px; */
 }
-
-
-/* .nav_menu a:hover {
-    /* border-bottom: 2px solid cadetblue;
-}*/
-
-
-/* header .nav_menu{
-    font-size: 2.5em; 
-     display: none;
-    }*/
 
 #chk1:checked~ul {
     right: 0;
@@ -199,7 +176,6 @@ header ul {
 
 #slogan {
     position: absolute;
-    text-align: center;
     width: 100%;
     padding: 30px;
     top: 35%;
@@ -258,15 +234,6 @@ header ul {
 }
 
 
-/* .gallery_row {
-     display: none; 
- display: flex;
-    width: 15%;
-    text-align: center;
-    font-size: 15px; 
-}*/
-
-
 /* ---------------------------------------- */
 
 
@@ -276,7 +243,6 @@ header ul {
 /*---------------------------------------- */
 
 #contact_us {
-    /* background-color: #234e4e61; */
     background-image: url("/public/images/contactUs.jpeg");
 }
 
@@ -293,10 +259,6 @@ textarea {
     margin-top: 6px;
     margin-bottom: 16px;
     resize: vertical;
-}
-
-.commentSection h2 {
-    text-align: center;
 }
 
 #contact_us input[type=submit] {
@@ -324,18 +286,13 @@ textarea {
 
 .container_contact h3 {
     font-size: 64px;
-    text-align: center;
     color: white;
 }
 
 #contact_us form,
 #commentbox form {
     background-color: rgb(33 101 101 / 94%);
-    /* width: 80%; */
-    /* height: 70%; */
-    /* margin: 20px 114px; */
     padding: 20px;
-    /* padding-right: 30px; */
     border-radius: 3px;
     color: white;
 }
@@ -349,24 +306,15 @@ textarea {
 
 /*---------------------------------------- */
 
-.chapters_content_head {
-    text-align: center;
-    /* margin: 50px; */
-}
-
 .all_chapters {
-    /* background-color: #d3d5d6; */
     margin: 30px;
-    background-image: url('public/images/chapteralaska.jpg');
 }
 
 .chapterlist {
     box-sizing: border-box;
     width: 100%;
-    /* margin-bottom: 16px; */
     padding: 26px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    /* text-align: justify; */
     box-sizing: border-box;
     text-justify: inter-word;
 }
@@ -392,18 +340,16 @@ textarea {
 
 .chapterlist a {
     text-decoration: none;
-    text-align: center;
     color: black;
 }
 
 .list {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); */
     margin: 8px;
     padding: 0 16px;
-    /* display: grid; */
     gap: 10px;
     grid-template-columns: auto auto auto;
-    grid-auto-rows: minmax(100px, auto);
+    /* grid-auto-rows: minmax(100px, auto); */
     text-decoration: none;
 }
 
@@ -421,7 +367,6 @@ textarea {
     padding: 8px;
     color: white;
     background-color: #000;
-    text-align: center;
     cursor: pointer;
     width: 100%;
 }
@@ -439,14 +384,11 @@ textarea {
 }
 
 #commentListContent {
-    /* display: inline; */
     margin-top: 17px;
     background-color: #b7b7b740;
     align-items: center;
     padding: 24px;
     border-top: 4mm ridge rgba(16, 99, 99, 0.61);
-    /* border-top: solid; */
-    /* background-image: url("/public/images/contactpeg"); */
 }
 
 
@@ -481,7 +423,6 @@ footer a {
     color: white;
     padding: 7px;
     text-align: center;
-    display: block;
 }
 
 .socialmedia {
@@ -546,13 +487,7 @@ thead {
 
 @media screen and (min-width: 1200px) {
     header {
-        display: flex;
-        justify-content: space-between;
-        position: fixed;
-        padding: 17px;
-        width: 100%;
-        background-color: #294040;
-        padding: 0px;
+        padding: 10px;
     }
     .headerbackend {
         padding: 17px;
@@ -586,7 +521,6 @@ thead {
         padding: 28px;
     }
     .recentpost_list .recentpost_display {
-        /* column-count: 2; */
         display: flex;
     }
     .recentpost_list .recentpost_display img {
@@ -611,13 +545,16 @@ thead {
     .list {
         display: grid;
     }
+    .chapter_contents h3 {
+        font-size: 22px;
+        padding: 20px;
+    }
     .content {
         padding-right: 122px;
         padding-top: 100px;
         padding-left: 122px;
     }
     #commentListContent {
-        /* display: inline; */
         margin-top: 17px;
         background-color: #b7b7b740;
         align-items: center;
@@ -649,10 +586,8 @@ thead {
     #commentbox form {
         background-color: rgb(33 101 101 / 94%);
         width: 80%;
-        /* height: 70%; */
         margin: 20px 114px;
         padding: 20px;
-        /* padding-right: 30px; */
         border-radius: 3px;
         color: white;
     }
@@ -673,6 +608,7 @@ thead {
     h2,
     .chapters_content h3 a {
         color: black;
+        padding-bottom: 30px;
     }
     .dashboardHeader {
         display: flex;
@@ -681,9 +617,11 @@ thead {
         background-color: #2940401a;
     }
     #dashboardTable {
-        padding: 31px;
+        padding: 20px;
+        padding-top: 109px;
     }
-    #dashboardTable #chapterList #commentList {
+    #dashboardTable #chapterList #commentList footer,
+    footer a {
         display: block;
     }
     .dashboardAction {
@@ -694,24 +632,9 @@ thead {
     .dashboardAction form {
         color: teal;
     }
-    .dashboardtitles {
-        padding: 35px;
-        display: flex;
-        justify-content: space-between;
-    }
-    /* .dashboardTitles {
-        display: flex;
-        justify-content: space-around;
-        padding: 11px;
-        background-color: #32a9a952;
-    } */
-    #dashboardbody {
-        margin-top: 74px;
-    }
     .sectionBackend {
         margin-top: 146px;
-        padding-left: 15px;
-        padding-right: 15px;
+        padding: 30px;
     }
     .dashboardnewChapter {
         background-color: #008080;
@@ -738,9 +661,9 @@ thead {
     .dashboardnewChapter a {
         color: #ffbd43;
     }
-    /* #dashboard h1 h2 {
+    #dashboard h1 h2 {
         display: flex;
-    } */
+    }
     .adminChapters img {
         width: 32%;
         height: auto;
@@ -760,17 +683,14 @@ thead {
         color: #f5e6ca;
         text-align: center;
     }
-    /* #dashboardTable #chapterList .chapter_contents {
-        padding: 20px;
-    } */
-    /* #newChapter {
-        padding: 73px;
-        background-color: #80808024
-    } */
-    /* #dashboardTable {
-        padding: 73px;
-        background-color: #80808024
-    } */
+    .chapterT {
+        font-size: 30px;
+        padding-top: 40px;
+        line-height: 46px;
+    }
+    #sectionBackend span {
+        font-size: 30px;
+    }
     #warning {
         display: flex;
         color: red;
