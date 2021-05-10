@@ -17,11 +17,11 @@
             return $comments;
         }
 
-       
+        
         public function getComments(){
             global $db;
             $req = $db->prepare('
-          SELECT *
+          SELECT *  
           FROM comment');
             $req->execute();
             $comments = $req->fetchAll();
@@ -44,4 +44,3 @@
           }
        
     }
-?>

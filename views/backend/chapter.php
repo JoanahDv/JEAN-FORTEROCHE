@@ -4,35 +4,41 @@
     <?php if (isset($successMessage)) { ?>
         <span><?php echo $successMessage; ?></span>
     <?php } ?>
-<!-- <div class ="backHome">
+    <!-- <div class ="backHome">
      <li><a href="#dashboardHome"><i class="fas fa-home"></i>HOME</li>
 </div> -->
 
-    <form action="index.php?action=new_chapter" method="POST">
-        <div class ="newchapterForm">
-            <!-- <p><label>Chapter number</label><br />
-                <input type='text' name='number'>
-            </p> -->
+    <form id="chapter-form" action="index.php?action=new_chapter" method="POST"></form>
+    <form id="form-image-upload" action="index.php?action=upload_image" method="POST" enctype="multipart/form-data"></form>
 
-            <label>Title</label><br />
-            <input type='text' name='title'></p><br>
+    <div class="newchapterForm">
+        <!-- <p><label>Chapter number</label><br />
+            <input type='text' name='number'>
+        </p> -->
 
-            <form action="index.php?action=upload_image" method="POST" enctype="multipart/form-data">
-                <label for="file">Image</label><br>
-                <input type="file" name="file"><br>
-                <button type="submit">Save</button>
-            </form>
-            <p><label>Body</label><br />
-                <textarea name='body' cols='60' rows='10' id='body'></textarea></p>
+        <label>Title</label><br />
+        <input type='text' name='title' form="chapter-form" /><br>
 
-            <p><label>Draft</label><br />
-                <input type='checkbox' name='draft'></p>
+        <label for="file">Image</label><br>
+        <input type="file" name="file" form="form-image-upload"><br>
+        <input type="submit" value="Save" form="form-image-upload"/>
+        <input type="hidden" id="image" name="image" form="chapter-form" />
 
-            <div class="action_buttons">
-                <p><input type='submit' name='submit' value='Submit'></p>
+        <p><label>Body</label><br />
+            <textarea name='body' cols='60' rows='10' id='body' form="chapter-form"></textarea>
+        </p>
 
-            </div>
-    </form>
+        <p><label>Draft</label><br />
+            <input type='checkbox' name='draft' form="chapter-form">
+        </p>
+
+        <div class="action_buttons">
+            <p>
+                <input type='submit' name='submit' value='Submit' form="chapter-form">
+            </p>
+        </div>
+    </div>
 </section>
+
 <?php $content = ob_get_clean(); ?>
-<?php require 'views/backend/template.php'; ?>
+<?php require 'views/backend/template.php'; ?>  
