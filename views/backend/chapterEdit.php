@@ -15,7 +15,7 @@
         <label class="chapterT"><b>ChapterTitle</b></label><br />
 
         <input class="titleText" type='text' name='title' form="chapter-form" value="<?php echo $chapter['title'] ?>" /><br>
-        <label for="file"><b>Insert Image</b></label><br>
+        <label class="imageBox" for="file"><b>Insert Image</b></label><br>
         <div class="fileUpload">
             <input type="file" name="file" form="form-image-upload">
             <input type="submit" value="Save" form="form-image-upload" />
@@ -26,7 +26,7 @@
     <div class="newchapterForm">
 
 
-        <div class="textSection"><label>Body</label><br />
+        <div class="textSection"><br />
             <textarea name='body' cols='60' rows='10' id='body' form="chapter-form"><br>
             </textarea>
         </div>

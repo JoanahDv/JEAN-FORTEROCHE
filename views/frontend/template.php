@@ -1,4 +1,3 @@
-
 <!DOCTYPE HTML>
 <html lang="en">
 
@@ -6,7 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="JEAN FORTEROCHE">
-    <meta name="author" content="ME">
+    <meta name="JEANFORTEROCHE" content="JEAN FORTEROCHE">
     <title>A SIMPLE TICKET TO ALASKA</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">

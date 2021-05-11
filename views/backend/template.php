@@ -8,6 +8,8 @@
     <meta name="description" content="JEAN FORTEROCHE">
     <meta name="author" content="ME">
     <title>A SIMPLE TICKET TO ALASKA</title>
+    <link rel="shortcut icon" type="image/jpg" href="/favicon.png"/>
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">

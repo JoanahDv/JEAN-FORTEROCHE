@@ -33,30 +33,24 @@ if (isset($_GET['action'])) { // action is set
         // BACKEND  ACTIONS
     } elseif ($_GET['action'] == 'new_chapter') {
         newChapter($_POST);
-
     } elseif ($_GET['action'] == 'dashboard') {
         dashboard();
 
         //get all pages in backend
     } elseif ($_GET['action'] == 'chapterList') {
-         chapterList();
+        chapterList();
     } elseif ($_GET['action'] == 'commentList') {
         commentList();
     } elseif ($_GET['action'] == 'contactList') {
         contactList();
-
     } elseif ($_GET['action'] == 'login') {
         login($_POST);
-
     } elseif ($_GET['action'] == 'logout') {
         logout();
-    
-    }elseif($_GET['action'] == 'editChapter') {
+    } elseif ($_GET['action'] == 'editChapter') {
         editChapter($_GET['id'], $_POST);
-        
     } elseif ($_GET['action'] == 'deleteChapter') {
         deleteChapter($_POST);
-
     } elseif ($_GET['action'] == 'deleteComment') {
         deleteComment($_POST);
 
@@ -67,10 +61,8 @@ if (isset($_GET['action'])) { // action is set
         //VALIDATE THE COMMENT BACK END 
     } elseif ($_GET['action'] == 'validateComment') {
         validateComment($_POST);
-
     } elseif ($_GET['action'] == 'upload_image') {
         uploadFile($_POST);
-
     } else { // unknown action
         echo 'Error : unknown action : ' . $_GET['action'];
         die();
