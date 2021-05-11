@@ -2,16 +2,15 @@
 <div class="chapters_content">
     <h1>A simple ticket to Alaska</h1>
     <br>
-    <p>
-        <i>Every destination you’ll visit leaves its own unique memory.
-        </i>
-    </p>
-    <p>
-        <i> Thinking back of our travels through Alaska already gives me the goosebumps.
-            As this travel quote says:Make memories all over the world!
-        </i>
-    </p>
-    <br>
+    <q>
+            <i>Every destination you’ll visit leaves its own unique memory.
+
+                <br>
+                Thinking back of our travels through Alaska already gives me the goosebumps.
+                As this travel quote says:Make memories all over the world!
+            </i>
+        </q>
+        <br>
 </div>
 
 <div class="all_chapters">

@@ -19,7 +19,7 @@
         </ul>
     
     <p class="rights">
-        © Jean Forteroche 2021 | All rights reserved | A siple ticket to ALASKA | Privacy Policy
+        © Jean Forteroche 2021 | All rights reserved   | Project 4 OpenClassrooms |  A siple ticket to ALASKA | Privacy Policy
     </p>
     <p>
         <a href="index.php?action=login">ADMIN LOGIN</a>

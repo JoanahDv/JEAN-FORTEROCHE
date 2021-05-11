@@ -7,7 +7,7 @@
         <i> publish on
             <?php echo $comment['comment_date'] ?></i>
         <br>
-        
+
         <p class="success-flag-comment">This comment has been flagged.</p>
         <form action="index.php?action=flagComment" method="post" class="flagform">
             <input type="hidden" value="<?php echo $comment['id'] ?>" name="id" />
@@ -15,5 +15,5 @@
         </form>
     </div>
 
-    
+
 <?php } ?>

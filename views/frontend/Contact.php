@@ -4,16 +4,17 @@
 <section id="contact_us">
     <div class="chapters_content">
         <h1>Get in touch</h1>
-        <br>
-        <p>
+
+        <q>
             <i>Every destination you’ll visit leaves its own unique memory.
-            </i>
-        </p>
-        <p>
-            <i> Thinking back of our travels through Alaska already gives me the goosebumps.
+
+                <br>
+                Thinking back of our travels through Alaska already gives me the goosebumps.
                 As this travel quote says:Make memories all over the world!
             </i>
-        </p>
+        </q>
+        <br>
+
         <br>
     </div>
 

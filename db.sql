@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:8889
--- Generation Time: May 10, 2021 at 04:04 PM
+-- Generation Time: May 11, 2021 at 02:47 PM
 -- Server version: 5.7.32
 -- PHP Version: 7.4.12
 
@@ -77,7 +77,7 @@ INSERT INTO `comment` (`id`, `parent_id`, `chapter_id`, `comment`, `comment_date
 (13, NULL, 3, 'Merci', '2021-03-15 17:09:13', 'Steph', 0, 0, 0, 'steph@yahoo.com'),
 (29, NULL, 3, 'Love it', '2021-04-14 15:12:07', 'sandy', 1, 0, 1, 'sandy@yahoo.com'),
 (30, NULL, 1, 'Great Chapter!', '2021-04-15 09:52:13', 'Tony', 1, 0, 1, 'tony@gmail.com'),
-(31, NULL, 12, 'A-M-A-Z-I-N-G', '2021-04-15 09:53:00', 'Claire', 1, 0, 1, 'Claire@gmail.com'),
+(31, NULL, 12, 'A-M-A-Z-I-N-G', '2021-04-15 09:53:00', 'Claire', 1, 1, 1, 'Claire@gmail.com'),
 (32, NULL, 26, 'Amazing chapter, However, we would love to know what happened to Mr.Scott\r\nThank you', '2021-05-10 15:41:28', 'Tina', 1, 0, 1, 'tina@yahoo.com'),
 (33, NULL, 8, 'Love a Good cafe!', '2021-05-10 15:44:00', 'Tania ', 1, 0, 1, 'taniagal@yahoo.com');
 
@@ -106,7 +106,8 @@ INSERT INTO `contact` (`id`, `first_name`, `last_name`, `email`, `subject`, `mes
 (4, 'Frank', 'Enstein', 'frankenstein@yahoo.com', 'Mind Blown', 'Fantastic!'),
 (5, 'Michael', 'Jourdaym', 'michael@outlook.fr', 'Thanks', 'Great Chapter! Can\'t wait to read more!'),
 (6, 'sandy', 'money', 'samdym@yahoo.com', 'chapter3', 'Love it!'),
-(7, 'Jane', 'Cooke', 'janecooke@yahoo.com', 'Alaska', 'This book was amazing to read. Hope to see more soon. Thank you');
+(7, 'Jane', 'Cooke', 'janecooke@yahoo.com', 'Alaska', 'This book was amazing to read. Hope to see more soon. Thank you'),
+(8, 'June', 'Metalic', 'metalicjune@yahoo.com', 'Appreciation', 'Thank you so much  ');
 
 -- --------------------------------------------------------
 
@@ -125,7 +126,7 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id`, `username`, `password`) VALUES
-(1, 'jo', '$2y$10$5BfUukE1XZBUOr7bl.F28eDhAecVtWawt7MtwH1UL4VjN9lHXn4kK');
+(1, 'jo', '$2y$10$QbMxxQZfZ9oAOOQlpbiUoO9bNgyB5XQ6.F6BmeoepF87tlKieI7PC');
 
 --
 -- Indexes for dumped tables
@@ -179,7 +180,7 @@ ALTER TABLE `comment`
 -- AUTO_INCREMENT for table `contact`
 --
 ALTER TABLE `contact`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `user`

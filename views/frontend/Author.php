@@ -20,6 +20,7 @@
             As my passion for travelling deepened. I explored the great Alaksa.
         </p>
     </div>
+
 </section>
 <?php $content = ob_get_clean(); ?>
 <?php require 'views/frontend/template.php'; ?>

@@ -1,722 +1,704 @@
-/*---------------------------------------- */
-
-
-/* ==              FONTS                    */
-
-
-/*---------------------------------------- */
-
-body,
-html,
-.bloc_page {
-    height: 100%;
-}
-
-body {
-    font-family: 'Roboto', condensed;
-    margin: 0px;
-    line-height: 23px;
-}
-
-img {
-    width: 100%;
-    height: auto;
-}
-
-.bloc_page {
-    margin: auto;
-    width: 100%;
-}
-
-h1,
-.chapters_content h3 a {
-    color: white;
-}
-
-.content h1,
-h2 {
-    color: #796767;
-}
-
-.content h2 {
-    padding: 15px;
-}
-
-.container_post h2,
-.chapters_content,
-#slogan,
-.commentSection h2,
-.chapters_content_head,
-.container_contact h3,
-.chapters_content_head,
-.chapterlist a,
-.read_more,
-#dashboard h1,
-#dashboardHome h1,
-footer,
-footer a,
-.socialmedia,
-#adminlogin,
-#adminlogin form,
-#commentListContent h2,
-#commentbox form h1,
-#success,
-.dashboardnewChapter,
-#dashboardHome h1,
-.success-flag-comment {
-    text-align: center;
-}
-
-
-/* ---------------------------------------- */
-
-
-/* ==              HEADER               */
-
-
-/*---------------------------------------- */
-
-header {
-    background-color: #294040;
-    position: fixed;
-    z-index: 20;
-    top: 0;
-    width: 100%;
-    height: auto;
-    /* border-bottom: 1px solid #e5e5e5; */
-    display: flex;
-    padding: 26px;
-}
-
-header a,
-#slogan {
-    text-decoration: none;
-    color: whitesmoke;
-}
-
-.search-container {
-    position: inherit;
-}
-
-#burger_action {
-    color: wheat;
-    padding-right: 57px;
-}
-
-
-/* ---------------------------------------- */
-
-
-/* ==              CONTENT               */
-
-
-/*---------------------------------------- */
-
-.chapters_content {
-    background-color: teal;
-    margin-bottom: 37px;
-    margin-top: 35px;
-    padding-top: 62px
-}
-
-.container_post h2 {
-    background-color: #294040;
-    color: white;
-    padding: 15px;
-}
-
-.container_post {
-    background-color: #c3cece;
-}
-
-.container_books {
-    padding-top: 24px;
-    background-color: #80808029;
-}
-
-
-/* NAVIGATION */
-
-#burger_menu {
-    display: none;
-    top: 0;
-    right: 0;
-    list-style-type: none;
-}
-
-.nav_menu {
-    display: none;
-}
-
-.nav_menu {
-    clear: both;
-    transition: .2s ease-out;
-}
-
-header .logo {
-    flex: 1;
-    color: white;
-}
-
-.text-white-50 {
-    color: white;
-}
-
-header ul {
-    flex: 2;
-    display: flex;
-    justify-content: space-evenly;
-}
-
-.nav_menu {
-    list-style-type: none;
-}
-
-.nav_menu a {
-    text-decoration: none;
-    color: white;
-    font-size: 1.2em;
-    text-transform: uppercase;
-}
-
-#chk1:checked~ul {
-    right: 0;
-}
-
-
-/* HOME PAGE SLOGA*/
-
-#slogan {
-    position: absolute;
-    width: 100%;
-    padding: 30px;
-    top: 35%;
-}
-
-#slogan h2 {
-    color: white;
-}
-
-.startbutton {
-    padding: 9px;
-    /* width: 12%; */
-    border-radius: 18px;
-}
-
-
-/* PARALLAX */
-
-.parallax {
-    /* The image used */
-    background-image: url('/public/images/Alaskaimage.jpg');
-    /* Full height */
-    height: 100%;
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-
-/* ---------------------------------------- */
-
-
-/* ==              BOOKLIST               */
-
-
-/*---------------------------------------- */
-
-
-/* BOOK GALLERY LIST */
-
-.heading-title {
-    font-size: 17px;
-}
-
-#booklist img {
-    flex-direction: row;
-    flex-basis: 100%;
-    flex: 1;
-    margin: 12px;
-}
-
-#booklist {
-    display: none;
-}
-
-
-/* ---------------------------------------- */
-
-
-/* ==           CONTACT PAGE              */
-
-
-/*---------------------------------------- */
-
-#contact_us {
-    background-image: url("/public/images/contactUs.jpeg");
-}
-
-#contact_us input[type=text],
-select,
-textarea,
-#commentbox input [type=text],
-textarea {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    margin-top: 6px;
-    margin-bottom: 16px;
-    resize: vertical;
-}
-
-#contact_us input[type=submit] {
-    background-color: #294040;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-#contact_us input[type=submit]:hover {
-    background-color: #294040;
-}
-
-.container {
-    border-radius: 5px;
-    background-color: #f2f2f2;
-    padding: 20px;
-}
-
-.container_contact {
-    padding: 50px;
-}
-
-.container_contact h3 {
-    font-size: 64px;
-    color: white;
-}
-
-#contact_us form,
-#commentbox form {
-    background-color: rgb(33 101 101 / 94%);
-    padding: 20px;
-    border-radius: 3px;
-    color: white;
-}
-
-
-/* ---------------------------------------- */
-
-
-/* ==              CHAPTER                  */
-
-
-/*---------------------------------------- */
-
-.all_chapters {
-    margin: 30px;
-}
-
-.chapterlist {
-    box-sizing: border-box;
-    width: 100%;
-    padding: 26px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    box-sizing: border-box;
-    text-justify: inter-word;
-}
-
-.recentpost_list {
-    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
-    padding: 15px;
-}
-
-.content {
-    padding: 30px;
-}
-
-.body_text {
-    text-align: justify;
-    text-justify: inter-word;
-}
-
-.chapterlist h3 {
-    color: black;
-    text-decoration: none;
-}
-
-.chapterlist a {
-    text-decoration: none;
-    color: black;
-}
-
-.list {
-    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); */
-    margin: 8px;
-    padding: 0 16px;
-    gap: 10px;
-    grid-template-columns: auto auto auto;
-    /* grid-auto-rows: minmax(100px, auto); */
-    text-decoration: none;
-}
-
-.list::after,
-.chapterlist::after {
-    content: "";
-    clear: both;
-    display: table;
-}
-
-.read_more {
-    border: none;
-    outline: 0;
-    display: inline-block;
-    padding: 8px;
-    color: white;
-    background-color: #000;
-    cursor: pointer;
-    width: 100%;
-}
-
-.titleText {
-    width: 50%;
-}
-
-.textSection img {
-    width: 50%;
-}
-
-.read_more:hover {
-    background-color: #555;
-}
-
-#commentListContent {
-    margin-top: 17px;
-    background-color: #b7b7b740;
-    align-items: center;
-    padding: 24px;
-    border-top: 4mm ridge rgba(16, 99, 99, 0.61);
-}
-
-
-/* ---------------------------------------- */
-
-
-/* ==              AUTHOR                      */
-
-
-/*---------------------------------------- */
-
-.container_author {
-    display: flex;
-}
-
-#contaAuthor {
-    padding: 30px;
-}
-
-
-/* ---------------------------------------- */
-
-
-/* ==              FOOTER                */
-
-
-/*---------------------------------------- */
-
-footer,
-footer a {
-    background-color: #292929;
-    color: white;
-    padding: 7px;
-}
-
-.socialmedia {
-    display: flex;
-    list-style-type: none;
-    padding: 0px;
-    justify-content: center;
-}
-
-
-/* ---------------------------------------- */
-
-
-/* ==              LOGIN                    */
-
-
-/*---------------------------------------- */
-
-#adminlogin {
-    padding: 64px;
-    background-color: #00808038;
-}
-
-.loginsubmit {
-    border-radius: 10px;
-    background: linear-gradient(to right, teal, #cae3e3);
-    padding: 2px;
-    width: 14%;
-}
-
-#adminlogin h1 {
-    color: black;
-}
-
-#adminlogin form {
-    box-sizing: border-box;
-}
-
-.admin_container label {
-    padding-left: 8px;
-}
-
-.admin_container {
-    padding: 30px;
-}
-
-thead {
-    background-color: teal;
-}
-
-
-/* ---------------------------------------- */
-
-
-/*  ==            MEDIA QUERIES             */
-
-
-/*---------------------------------------- */
-
-@media screen and (min-width: 1200px) {
-    header {
-        padding: 10px;
-    }
-    .headerbackend {
-        padding: 17px;
-        width: 100%;
-    }
-    .nav_menu,
-    .logo {
-        display: flex;
-        justify-content: space-around;
-        padding: 10px;
-        list-style-type: none;
-        margin: 0px;
-        color: white;
-    }
-    .nav_menu li a:hover {
-        color: teal;
-    }
-    .startbutton {
-        width: 12%;
-    }
-    .chapter_background {
-        width: 100%;
-        height: 60vh;
-    }
-    #burger_action {
-        display: none;
-    }
-    #recentpost .chapterlist {
-        width: 35%;
-        padding: 28px;
-    }
-    .recentpost_list .recentpost_display {
-        display: flex;
-    }
-    /* .recentpost_list .recentpost_display img {
-        width: 24%;
-        height: auto;
-    } */
-    .recentpost_list .chapter_contents {
-        padding: 20px;
-    }
-    #contaAuthor {
-        column-count: 2;
-        padding: 107px;
-        background-color: #3f8686;
-        color: antiquewhite;
-    }
-    #contaAuthor h3 {
-        font-size: 45px;
-    }
-    .gallery_row img {
-        width: 40%;
-    }
-    .list {
-        display: grid;
-    }
-    .chapter_contents h3 {
-        font-size: 22px;
-        padding: 20px;
-    }
-    .content {
-        padding-right: 122px;
-        padding-top: 100px;
-        padding-left: 122px;
-    }
-    #commentListContent {
-        margin-top: 17px;
-        background-color: #b7b7b740;
-        align-items: center;
-        padding: 79px;
-        border-top: 4mm ridge rgba(16, 99, 99, 0.61);
-    }
-    #commentListContent .comment_content {
-        padding: 20px;
-        background-color: rgb(178, 202, 202);
-        margin-top: 10px;
-    }
-    .table tr:hover {
-        background-color: rgb(170, 202, 202);
-    }
-    #newChapter form {
-        border: solid 1px;
-        padding: 20px;
-        background-color: white;
-    }
-    #commentListContent h2 {
-        font-size: 45px;
-    }
-    #commentbox form h1 {
-        color: whitesmoke;
-    }
-    #contact_us form,
-    #commentbox form {
-        background-color: rgb(33 101 101 / 94%);
-        width: 80%;
-        margin: 20px 114px;
-        padding: 20px;
-        border-radius: 3px;
-        color: white;
-    }
-    #success {
-        font-size: 30px;
-        background-color: #b2caca;
-        color: #294040;
-        padding: 5px;
-        display: none;
-        line-height: 2;
-    }
-    /* ---------------------------------------- */
-    /*  ==            BECK END                  */
-    /*---------------------------------------- */
-    /* #recent_posts img {
-        width: 67%;
-        overflow: hidden;
-    } */
-    #dashboard header {
-        display: none;
-    }
-    #dashboard h1,
-    h2,
-    .chapters_content h3 a {
-        color: black;
-        padding-bottom: 30px;
-    }
-    .dashboardHeader {
-        display: flex;
-        justify-content: space-between;
-        padding: 23px;
-        background-color: #2940401a;
-    }
-    #dashboardTable {
-        padding: 20px;
-        padding-top: 109px;
-    }
-    #dashboardTable #chapterList #commentList footer,
-    footer a {
-        display: block;
-    }
-    .dashboardAction {
-        display: flex;
-        justify-content: space-evenly;
-    }
-    .dashboardAction a,
-    .dashboardAction form {
-        color: teal;
-    }
-    .sectionBackend {
-        margin-top: 146px;
-        padding: 30px;
-    }
-    .dashboardnewChapter {
-        background-color: #008080;
-        padding: 11px;
-        border-radius: 20px;
-        width: 14%;
-        transform: scale(1);
-        transition-property: transform;
-        transition-duration: 500ms;
-    }
-    .dashboardnewChapter:hover {
-        transform: scale(1.2);
-        background-color: teal;
-        color: white;
-    }
-    .table h3 a,
-    .comment_content h3 a {
-        color: #294040;
-        text-decoration: none;
-        font-size: 19px;
-    }
-    .headerbackend li a,
-    .dashboardnewChapter a {
-        color: #ffbd43;
-    }
-    #dashboard h1 h2 {
-        display: flex;
-    }
-    .adminChapters img {
-        width: 32%;
-        height: auto;
-    }
-    #dashboardTable #chapterList .recentpost_display {
-        display: flex;
-    }
-    #dashboardTable .read_more {
-        width: 20%;
-    }
-    #dashboardHome {
-        padding: 24px;
-        margin-top: 87px;
-        background-color: #a57a28;
-    }
-    #dashboardHome h1 {
-        color: #f5e6ca;
-    }
-    .chapterT {
-        font-size: 30px;
-        padding-top: 40px;
-        line-height: 46px;
-    }
-    #sectionBackend span {
-        font-size: 30px;
-    }
-    .fileUpload img {
-        width: 50%;
-        display: flex;
-        padding-top: 23px;
-    }
-    .imageBox {
-        padding-top: 25px;
-    }
-    #warning {
-        display: flex;
-        color: red;
-    }
-    .success-flag-comment {
-        color: #fefefe;
-        padding: 7px;
-        display: none;
-        /* width: 30%; */
-        background-color: #801313c7;
-        border-radius: 24px;
-    }
-}
+ /*---------------------------------------- */
+ /* ==              FONTS                    */
+ /*---------------------------------------- */
+ 
+ body,
+ html,
+ .bloc_page {
+     height: 100%;
+ }
+ 
+ body {
+     font-family: 'Times', Times New Roman, serif;
+     width: 100%;
+     margin: 0px;
+     line-height: 23px;
+ }
+ 
+ img {
+     width: 100%;
+     height: auto;
+ }
+ 
+ .bloc_page {
+     margin: auto;
+     width: 100%;
+ }
+ 
+ h1,
+ .chapters_content h3 a {
+     color: white;
+ }
+ 
+ .content h1,
+ h2,
+ .chapter_contents h3 a {
+     color: #191919;
+ }
+ 
+ .content h2 {
+     padding: 15px;
+ }
+ 
+ .container_post h2,
+ .chapters_content,
+ #slogan,
+ .commentSection h2,
+ .chapters_content_head,
+ .container_contact h3,
+ .chapters_content_head,
+ .chapterlist a,
+ .read_more,
+ #dashboard h1,
+ #dashboardHome h1,
+ footer,
+ footer a,
+ .socialmedia,
+ #adminlogin,
+ #adminlogin form,
+ #commentListContent h2,
+ #commentbox form h1,
+ #success,
+ .dashboardnewChapter,
+ #dashboardHome h1,
+ .success-flag-comment {
+     text-align: center;
+ }
+ /* COLOR */
+ 
+ .chapterlist h3,
+ #dashboard h1,
+ h2,
+ .read_more a {
+     color: black;
+ }
+ 
+ .chapters_content q,
+ #contact_us input,
+ #slogan h2,
+ .text-white-50,
+ .nav_menu a,
+ .container,
+ .container_contact h3,
+ #contact_us form,
+ #commentbox form,
+ .read_more,
+ .read_more:hover,
+ .container_post h2 #contact_us input,
+ footer,
+ footer a {
+     color: white;
+ }
+ /* ---------------------------------------- */
+ /* ==              HEADER               */
+ /*---------------------------------------- */
+ 
+ header {
+     background-color: #294040;
+     position: fixed;
+     z-index: 20;
+     top: 0;
+     width: 100%;
+     height: auto;
+     /* border-bottom: 1px solid #e5e5e5; */
+     display: flex;
+     padding: 26px;
+ }
+ 
+ header a,
+ #slogan {
+     text-decoration: none;
+     color: whitesmoke;
+ }
+ 
+ .search-container {
+     position: inherit;
+ }
+ 
+ #burger_action {
+     color: wheat;
+     padding-right: 57px;
+ }
+ 
+ header .logo {
+     display: none;
+ }
+ /* ---------------------------------------- */
+ /* ==              CONTENT               */
+ /*---------------------------------------- */
+ 
+ .chapters_content {
+     background-color: teal;
+     margin-bottom: 37px;
+     margin-top: 35px;
+     padding-top: 62px
+ }
+ 
+ .container_post h2 {
+     background-color: #294040;
+     padding: 15px;
+ }
+ 
+ .container_post {
+     background-color: #c3cece;
+ }
+ 
+ .container_books {
+     padding-top: 24px;
+     background-color: #80808029;
+ }
+ /* NAVIGATION */
+ 
+ #burger_menu {
+     display: none;
+     top: 0;
+     right: 0;
+     list-style-type: none;
+ }
+ 
+ .nav_menu {
+     display: none;
+ }
+ 
+ .nav_menu {
+     clear: both;
+     transition: .2s ease-out;
+ }
+ 
+ header ul {
+     flex: 2;
+     /* display: flex; */
+     justify-content: space-evenly;
+     list-style-type: none;
+ }
+ 
+ .nav_menu {
+     list-style-type: none;
+ }
+ 
+ .nav_menu a {
+     text-decoration: none;
+     font-size: 1.2em;
+     text-transform: uppercase;
+ }
+ 
+ #chk1:checked~ul {
+     right: 0;
+ }
+ /* HOME PAGE SLOGA*/
+ 
+ #slogan {
+     position: absolute;
+     width: 100%;
+     padding: 30px;
+     top: 35%;
+ }
+ 
+ .startbutton {
+     padding: 9px;
+     /* width: 12%; */
+     border-radius: 18px;
+ }
+ 
+ .parallax,
+ #homepage {
+     display: none;
+ }
+ 
+ #recent_posts {
+     margin-top: 75px;
+ }
+ /* ---------------------------------------- */
+ /* ==           CONTACT PAGE              */
+ /*---------------------------------------- */
+ 
+ #contact_us {
+     background-image: url("/public/images/contactUs.jpeg");
+ }
+ 
+ #contact_us input[type=text],
+ select,
+ textarea,
+ #commentbox input [type=text],
+ textarea {
+     width: 100%;
+     padding: 12px;
+     border: 1px solid #ccc;
+     border-radius: 4px;
+     box-sizing: border-box;
+     margin-top: 6px;
+     margin-bottom: 16px;
+     resize: vertical;
+ }
+ 
+ #contact_us input [type=submit] {
+     background-color: #294040;
+     padding: 12px 20px;
+     border: none;
+     border-radius: 4px;
+     cursor: pointer;
+ }
+ 
+ #contact_us input[type=submit]:hover {
+     background-color: #294040;
+ }
+ 
+ .container {
+     border-radius: 5px;
+     padding: 20px;
+ }
+ 
+ .container_contact {
+     padding: 50px;
+ }
+ 
+ .container_contact h3 {
+     font-size: 64px;
+ }
+ 
+ #contact_us form,
+ #commentbox form {
+     background-color: rgb(33 101 101 / 94%);
+     padding: 20px;
+     border-radius: 3px;
+ }
+ 
+ #success {
+     font-size: 30px;
+     background-color: #b2caca;
+     color: #294040;
+     padding: 5px;
+     display: none;
+     line-height: 2;
+ }
+ /* ---------------------------------------- */
+ /* ==              CHAPTER                  */
+ /*---------------------------------------- */
+ 
+ .all_chapters {
+     margin: 30px;
+ }
+ 
+ .chapterlist {
+     box-sizing: border-box;
+     width: 100%;
+     padding: 26px;
+     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+     box-sizing: border-box;
+     text-justify: inter-word;
+ }
+ 
+ .recentpost_list {
+     box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
+     padding: 15px;
+ }
+ 
+ .content {
+     padding: 30px;
+ }
+ 
+ .body_text {
+     text-align: justify;
+     text-justify: inter-word;
+ }
+ 
+ .chapterlist h3 {
+     text-decoration: none;
+ }
+ 
+ .chapterlist a {
+     text-decoration: none;
+ }
+ 
+ .list {
+     /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); */
+     margin: 8px;
+     padding: 0 16px;
+     gap: 10px;
+     grid-template-columns: auto auto auto;
+     /* grid-auto-rows: minmax(100px, auto); */
+     text-decoration: none;
+ }
+ 
+ .list::after,
+ .chapterlist::after {
+     content: "";
+     clear: both;
+     display: table;
+ }
+ 
+ .read_more {
+     border: none;
+     outline: 0;
+     display: inline-block;
+     padding: 8px;
+     background-color: #000;
+     cursor: pointer;
+     width: 100%;
+ }
+ 
+ .pagination ul {
+     display: flex;
+     padding-left: 0;
+     list-style-type: none;
+ }
+ 
+ .titleText {
+     width: 50%;
+ }
+ 
+ .textSection img {
+     width: 50%;
+ }
+ 
+ .read_more:hover {
+     background-color: teal;
+ }
+ 
+ #commentListContent {
+     margin-top: 17px;
+     background-color: #b7b7b740;
+     align-items: center;
+     padding: 24px;
+     border-top: 4mm ridge rgba(16, 99, 99, 0.61);
+ }
+ 
+ #commentListContent .comment_content {
+     padding: 20px;
+     background-color: rgb(178, 202, 202);
+     margin-top: 10px;
+ }
+ /* lagging messages for each chapters */
+ 
+ .success-flag-comment {
+     color: #fefefe;
+     padding: 7px;
+     display: none;
+     background-color: #801313c7;
+     border-radius: 24px;
+ }
+ /* ---------------------------------------- */
+ /* ==              AUTHOR                      */
+ /*---------------------------------------- */
+ 
+ .container_author {
+     display: flex;
+     margin-top: 56px;
+ }
+ 
+ #contaAuthor {
+     padding: 30px;
+ }
+ /* ---------------------------------------- */
+ /* ==              FOOTER                */
+ /*---------------------------------------- */
+ 
+ footer,
+ footer a {
+     background-color: #292929;
+     padding: 7px;
+ }
+ 
+ .socialmedia {
+     display: flex;
+     list-style-type: none;
+     padding: 0px;
+     justify-content: center;
+ }
+ /* ---------------------------------------- */
+ /* ==              LOGIN                    */
+ /*---------------------------------------- */
+ 
+ #adminlogin {
+     padding: 64px;
+     background-color: #00808038;
+ }
+ 
+ .loginsubmit {
+     border-radius: 10px;
+     background: linear-gradient(to right, teal, #cae3e3);
+     padding: 2px;
+     width: 14%;
+ }
+ 
+ #adminlogin h1 {
+     color: black;
+ }
+ 
+ #adminlogin form {
+     box-sizing: border-box;
+ }
+ 
+ .admin_container label {
+     padding-left: 8px;
+ }
+ 
+ .admin_container {
+     padding: 30px;
+ }
+ 
+ thead {
+     background-color: teal;
+ }
+ 
+ .table h3 a,
+ .comment_content h3 a {
+     text-decoration: none;
+     font-size: 19px;
+ }
+ 
+ .desktop_row {
+     display: none;
+ }
+ 
+ tr.last_row {
+     border-bottom: 5px solid teal;
+ }
+ 
+ .mobile_row td {
+     background-color: #80808033;
+     font-size: 22px;
+ }
+ 
+ .dashboardnewChapter {
+     background-color: #008080;
+     padding: 11px;
+     border-radius: 20px;
+ }
+ 
+ .headerbackend li a,
+ .dashboardnewChapter a {
+     color: #ffbd43;
+ }
+ 
+ #warning {
+     display: flex;
+     color: red;
+ }
+ /* ---------------------------------------- */
+ /*  ==            MEDIA QUERIES             */
+ /*---------------------------------------- */
+ 
+ @media screen and (min-width: 1200px) {
+     /* ---------------------------------------- */
+     /* ==          HEADER                   */
+     /*---------------------------------------- */
+     header {
+         padding: 16px;
+     }
+     header .logo {
+         flex: 1;
+         color: white;
+     }
+     header .logo {
+         display: block;
+     }
+     .nav_menu,
+     .logo {
+         display: flex;
+         justify-content: space-around;
+         padding: 10px;
+         list-style-type: none;
+         margin: 0px;
+         color: white;
+     }
+     .nav_menu li a:hover {
+         color: teal;
+     }
+     /* ---------------------------------------- */
+     /* ==          HOME PAGE                   */
+     /*---------------------------------------- */
+     .startbutton {
+         width: 12%;
+     }
+     /* PARALLAX HOME PAGE */
+     .parallax {
+         /* The image used */
+         background-image: url('/public/images/Alaskaimage.jpg');
+         /* Full height */
+         height: 100%;
+         /* Create the parallax scrolling effect */
+         background-attachment: fixed;
+         background-position: center;
+         background-repeat: no-repeat;
+         background-size: cover;
+     }
+     .parallax,
+     #homepage {
+         display: block;
+     }
+     /* to modify the desktop version */
+     #recent_posts {
+         margin-top: 0px;
+     }
+     #recentpost .chapterlist {
+         width: 35%;
+         padding: 28px;
+     }
+     .recentpost_list .recentpost_display {
+         display: flex;
+     }
+     .recentpost_list .chapter_contents {
+         padding: 20px;
+     }
+     /* ---------------------------------------- */
+     /* ==          AUTHOR                   */
+     /*---------------------------------------- */
+     .container_author {
+         margin-top: 0px;
+     }
+     #contaAuthor {
+         column-count: 2;
+         padding: 107px;
+         background-color: #3f8686;
+         color: antiquewhite;
+     }
+     #contaAuthor h3 {
+         font-size: 45px;
+     }
+     .chapter_background {
+         width: 100%;
+         height: 60vh;
+     }
+     #burger_action {
+         display: none;
+     }
+     /* ---------------------------------------- */
+     /* ==           CHAPTER                   */
+     /*---------------------------------------- */
+     .chapter_contents h3 {
+         font-size: 22px;
+         /* padding: 20px; */
+     }
+     .content {
+         padding-right: 122px;
+         padding-top: 100px;
+         padding-left: 122px;
+     }
+     .table tr:hover {
+         background-color: rgb(170, 202, 202);
+     }
+     #commentListContent h2 {
+         font-size: 45px;
+     }
+     #commentbox form h1 {
+         color: whitesmoke;
+     }
+     #commentListContent {
+         padding: 79px;
+     }
+     #contact_us form,
+     #commentbox form {
+         background-color: rgb(33 101 101 / 94%);
+         width: 80%;
+         margin: 20px 114px;
+         padding: 20px;
+         border-radius: 3px;
+         color: white;
+     }
+     .eachimage {
+         padding: 108px
+     }
+     /* ---------------------------------------- */
+     /*  ==            BECK END                  */
+     /*---------------------------------------- */
+     /* dashboard homepage */
+     .headerbackend {
+         padding: 17px;
+         width: 100%;
+     }
+     #dashboard header {
+         display: none;
+     }
+     #dashboard h1,
+     h2,
+     .chapters_content h3 a {
+         padding-bottom: 30px;
+     }
+     .dashboardHeader {
+         display: flex;
+         justify-content: space-between;
+         padding: 23px;
+         background-color: #2940401a;
+     }
+     #dashboardTable {
+         padding: 28px;
+         padding-top: 50px;
+     }
+     #dashboardTable #chapterList #commentList footer,
+     footer a {
+         display: block;
+     }
+     .dashboardAction {
+         display: flex;
+         justify-content: space-evenly;
+     }
+     .dashboardAction a,
+     .dashboardAction form {
+         color: teal;
+     }
+     .sectionBackend {
+         margin-top: 146px;
+         padding: 30px;
+     }
+     /* creat new chapter */
+     .dashboardnewChapter {
+         width: 14%;
+         transform: scale(1);
+         transition-property: transform;
+         transition-duration: 500ms;
+     }
+     .dashboardnewChapter:hover {
+         transform: scale(1.2);
+         background-color: teal;
+         color: white;
+     }
+     #dashboard h1 h2 {
+         display: flex;
+     }
+     .adminChapters img {
+         width: 32%;
+         height: auto;
+     }
+     #dashboardTable #chapterList .recentpost_display {
+         display: flex;
+     }
+     #dashboardTable .read_more {
+         width: 20%;
+     }
+     #dashboardHome {
+         padding: 24px;
+         margin-top: 87px;
+         background-color: #a57a28;
+     }
+     #newChapter form {
+         border: solid 1px;
+         padding: 20px;
+         background-color: white;
+     }
+     #dashboardHome h1 {
+         color: #f5e6ca;
+     }
+     .desktop_row {
+         display: table-row;
+     }
+     .mobile_row {
+         display: none;
+     }
+     .chapterT {
+         font-size: 30px;
+         padding-top: 40px;
+         line-height: 46px;
+     }
+     #sectionBackend span {
+         font-size: 30px;
+     }
+     .fileUpload img {
+         width: 50%;
+         display: flex;
+         padding-top: 23px;
+     }
+     .imageBox {
+         padding-top: 25px;
+     }
+ }

@@ -18,16 +18,16 @@
     </div>
 
     <ul class="nav_menu">
-            <li class="nav-item"><a class="nav-link" href="index.php">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="index.php?action=author">Author</a></li>
-            <li class="nav-item"><a class="nav-link" href="index.php?action=chapters&page=1">Chapter</a></li>
-            <li class="nav-item"><a class="nav-link" href="index.php?action=contact">Contact</a></li>
-         
+        <li class="nav-item"><a class="nav-link" href="index.php">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.php?action=author">Author</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.php?action=chapters&page=1">Chapter</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.php?action=contact">Contact</a></li>
+
         <li class="search-container">
             <form action="/action_page.php">
                 <input type="text" placeholder="Search.." name="search">
                 <button type="submit"><i class="fa fa-search"></i></button>
             </form>
-</li>
+        </li>
     </ul>
 </header>

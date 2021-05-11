@@ -4,12 +4,12 @@
 
 <section id="dashboard">
     <section id="dashboardTable">
-
         <section id="commentList">
             <h1> COMMENTS</h1>
             <table class="table">
                 <thead>
-                    <tr>
+                    <tr class="desktop_row">
+
                         <th>Chapter Title</th>
                         <th>Author</th>
                         <th>comments</th>
@@ -21,8 +21,66 @@
                 <tbody>
 
                     <?php foreach ($comments as $comment) { ?>
+                        <tr class="mobile_row">
+                            <td colspan="2">
+                                <?php if ($comment['flag'] == 1) : ?>
+                                    <i id="warning" class="fas fa-exclamation-triangle"><br>
+                                        <p>this comment has been flagged</p>
+                                    </i>
+                                <?php endif; ?>
+                        </tr>
+                        <tr class="mobile_row">
+                            <td>Chapter Title</td>
+                            <td>
+                                <h3>
+                                    <a href="/index.php?action=chapter&id=<?php echo $comment['chapter_id'] ?>">
+                                        <?php echo  $comment['chapter']['title'] ?></a>
+                                </h3>
+                            </td>
+                        </tr>
+                        <tr class="mobile_row">
+                            <td>Author</td>
 
-                        <tr>
+                            <td>
+                                <h4><?php echo $comment['author'] ?></h4>
+                            </td>
+                        </tr>
+                        <tr class="mobile_row">
+                            <td>comments</td>
+                            <td>
+
+                                <p><?php echo $comment['comment'] ?></p>
+                            </td>
+                        </tr>
+                        <tr class="mobile_row">
+                            <td>Published Date</td>
+                            <td>
+                                <i> publish on <?php echo $comment['comment_date'] ?></i>
+                            </td>
+                        </tr>
+                        <tr class="mobile_row last_row">
+                            <!-- FORM TO DELETE COMMENT -->
+                            <div class="dashboardAction">
+                                <td>Action</td>
+                                <td>
+
+                                    <form action="index.php?action=deleteComment" method="post">
+                                        <input type="hidden" value="<?php echo $comment['id'] ?>" name="id" />
+                                        <input type="submit" value="Delete" />
+                                    </form>
+
+                                    <form action="index.php?action=validateComment" method="post">
+                                        <?php if ($comment['flag'] == 1) : ?>
+                                            <input type="hidden" value="<?php echo $comment['id'] ?>" name="id" />
+                                            <input type='submit' name='validate' value='Validate'>
+                                        <?php endif; ?>
+                                    </form>
+                                </td>
+                            </div>
+                        </tr>
+
+                        <!-- DESKTOP TABLE -->
+                        <tr class="desktop_row">
                             <div class="comment_content">
 
                                 <td>
