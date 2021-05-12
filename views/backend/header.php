@@ -10,7 +10,6 @@
             <li class="dashboardChapters"><a href="index.php?action=chapterList">CHAPTERS</li>
             <li class="dashboardComment"><a href="index.php?action=commentList">COMMENTS</a></li>
             <li class="dashboardMessages"><a href="index.php?action=contactList">INBOX</a></li>
-
             <li>
                 <form action="/action_page.php">
                     <input type="text" placeholder="Search.." name="search">

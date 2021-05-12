@@ -83,14 +83,14 @@ function chapterList()
     redirectIfNotLoggedin(); // call function to redirect to login page in not logged in
     $chapterManager = new ChapterManagerBackend();
     $chapters = $chapterManager->getChapters();
-    require('views/backend/chapterList.php');
+    require('views/backend/chapterPage.php');
 }
 function commentList()
 {
     redirectIfNotLoggedin(); // call function to redirect to login page in not logged in
     $commentManager = new CommentManagerBackend();
     $comments = $commentManager->getComments();
-    require('views/backend/commentList.php');
+    require('views/backend/commentPage.php');
 
 }
 function contactList()
@@ -98,7 +98,7 @@ function contactList()
     redirectIfNotLoggedin(); // call function to redirect to login page in not logged in
     $contactManager = new ContactManagerBackend();
     $contacts = $contactManager->getContacts();
-    require('views/backend/contactList.php');
+    require('views/backend/contactPage.php');
 }
 
 

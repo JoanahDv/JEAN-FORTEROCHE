@@ -32,6 +32,7 @@
  
  .content h1,
  h2,
+ #dashboard h1,
  .chapter_contents h3 a {
      color: #191919;
  }
@@ -67,7 +68,6 @@
  /* COLOR */
  
  .chapterlist h3,
- #dashboard h1,
  h2,
  .read_more a {
      color: black;
@@ -318,6 +318,7 @@
      grid-template-columns: auto auto auto;
      /* grid-auto-rows: minmax(100px, auto); */
      text-decoration: none;
+     /* display: grid; */
  }
  
  .list::after,
@@ -410,7 +411,8 @@
  /*---------------------------------------- */
  
  #adminlogin {
-     padding: 64px;
+     padding-top: 96px;
+     /* padding: 64px; */
      background-color: #00808038;
  }
  
@@ -474,6 +476,10 @@
  #warning {
      display: flex;
      color: red;
+ }
+ 
+ #dashboard h1 {
+     padding-top: 78px;
  }
  /* ---------------------------------------- */
  /*  ==            MEDIA QUERIES             */
@@ -586,6 +592,9 @@
      }
      #commentListContent {
          padding: 79px;
+     }
+     .list {
+         display: grid;
      }
      #contact_us form,
      #commentbox form {
